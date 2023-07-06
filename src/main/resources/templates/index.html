@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 
-<!--Came with tutorial-->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
-<!--Might be useful later?-->
-
+<html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>SplitBit - Discover Your Next Favorite Game</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-    <div>
-        <h2>SplitBit</h2>
-        <p>Website goes here!</p>
-    </div>
-</body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>SplitBit</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Favorites</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Next Favorite Game</h2>
+            <p>Explore a vast library of video games across different genres.</p>
+            <a href="#" class="login-button">Login</a>
+            <a href="#" class="signup-button">Sign Up</a>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="featured-games">
+        <h2>Featured Games</h2>
+        <div class="game-grid">
+            <!-- Game 1 -->
+            <div class="game-item">
+                <img src="game1.jpg" alt="Game 1">
+                <h3>Game 1</h3>
+            </div>
+
+            <!-- Game 2 -->
+            <div class="game-item">
+                <img src="game2.jpg" alt="Game 2">
+                <h3>Game 2</h3>
+            </div>
+
+            <!-- Game 3 -->
+            <div class="game-item">
+                <img src="game3.jpg" alt="Game 3">
+                <h3>Game 3</h3>
+            </div>
+
+            <!-- Add more game items as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 SplitBit. All rights reserved.</p>
+    </footer>
+</body>
 </html>
