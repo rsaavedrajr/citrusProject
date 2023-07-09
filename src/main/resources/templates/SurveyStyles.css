@@ -1,0 +1,31 @@
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Category Selection Section */
+.category-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.category-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.category-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}

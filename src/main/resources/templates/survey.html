@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SplitBit - Game Categories</title>
+    <link rel="stylesheet" href="SurveyStyles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Header content here -->
+    </header>
+
+    <!-- Category Selection Section -->
+    <section class="category-section">
+        <h2>Select Game Categories</h2>
+        <form action="submit.php" method="POST"> <!-- replace "submit.php" with your form submission endpoint -->
+            <div class="category-checkboxes">
+                <input type="checkbox" id="action" name="category[]" value="Action">
+                <label for="action">Action</label>
+                
+                <input type="checkbox" id="rpg" name="category[]" value="RPG">
+                <label for="rpg">RPG</label>
+                
+                <input type="checkbox" id="horror" name="category[]" value="Horror">
+                <label for="horror">Horror</label>
+                
+                <!-- Add more checkboxes for other categories -->
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
