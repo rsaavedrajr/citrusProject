@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>SplitBit - Game Categories</title>
     <link rel="stylesheet" href="SurveyStyles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -12,22 +14,66 @@
 
     <!-- Category Selection Section -->
     <section class="category-section">
-        <h2>Select Game Categories</h2>
+        <h2>Set your preferences by selecting options that you prefer.</h2>
         <form action="submit.php" method="POST"> <!-- replace "submit.php" with your form submission endpoint -->
             <div class="category-checkboxes">
+
+                <!-- Action option -->
                 <input type="checkbox" id="action" name="category[]" value="Action">
                 <label for="action">Action</label>
-                
-                <input type="checkbox" id="rpg" name="category[]" value="RPG">
-                <label for="rpg">RPG</label>
-                
+
+                <!-- stretegy option -->
+                <input type="checkbox" id="strategy" name="category[]" value="Strategy">
+                <label for="strategy">Strategy</label>
+
+                <!-- Horror option -->
                 <input type="checkbox" id="horror" name="category[]" value="Horror">
                 <label for="horror">Horror</label>
+
+                <!-- Puzzle option -->
+                <input type="checkbox" id="puzzle" name="category[]" value="Puzzle">
+                <label for="puzzle">Puzzle</label>
+
+                <!-- Survival option -->
+                <input type="checkbox" id="survival" name="category[]" value="Survival">
+                <label for="survival">Survival</label>
+
+                <!-- Open World option -->
+                <input type="checkbox" id="open_world" name="category[]" value="Open_World">
+                <label for="open_world">Open World</label>
                 
+                <!-- Tactcial option -->
+                <input type="checkbox" id="tactical" name="category[]" value="Tactical">
+                <label for="tactical">Tactical</label>
+
+                <!--Party option -->
+                <input type="checkbox" id="party" name="category[]" value="Party">
+                <label for="party">Party</label>
+
+                <!-- Racing option -->
+                <input type="checkbox" id="racing" name="category[]" value="Racing">
+                <label for="racing">Racing</label>
+
+                <!-- Music option -->
+                <input type="checkbox" id="music" name="category[]" value="Music">
+                <label for="music">Music</label>
+
                 <!-- Add more checkboxes for other categories -->
+
+                <!-- Shooter option -->
+                <input type="checkbox" id="shooter" name="category[]" value="Shooter">
+                <label for="shooter">Shooter</label>
+
+                <!-- Thriller option -->
+                <input type="checkbox" id="thriller" name="category[]" value="Thriller">
+                <label for="thriller">Thriller</label>
+
+
+
+
             </div>
 
-            <input type="submit" value="Submit">
+            <input class="submit" value="Submit">
         </form>
     </section>
 
@@ -36,4 +82,5 @@
         <!-- Footer content here -->
     </footer>
 </body>
+
 </html>
