@@ -1,5 +1,12 @@
+*{
+    font-family: monospace;
+    margin: 0;
+
+}
+
 /* Header */
 header {
+    font-family: monospace;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -12,20 +19,32 @@ header {
 }
 
 .category-section h2 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .category-checkboxes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    max-width: 500px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-row-gap: 50px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
 
 input[type="checkbox"] {
     margin-right: 5px;
+}
+
+.submit {
+    background-color: #ff3b3b;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+
 }
