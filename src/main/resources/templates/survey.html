@@ -9,12 +9,12 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Header content here -->
+        <a href="index.html" class="cancel-button">x</a>
     </header>
 
     <!-- Category Selection Section -->
     <section class="category-section">
-        <h2>Set your preferences by selecting options that you prefer.</h2>
+        <h2>select your game preferences for better recommendations:</h2>
         <form action="submit.php" method="POST"> <!-- replace "submit.php" with your form submission endpoint -->
             <div class="category-checkboxes">
 
@@ -68,12 +68,42 @@
                 <input type="checkbox" id="thriller" name="category[]" value="Thriller">
                 <label for="thriller">Thriller</label>
 
+                <!-- Exploration option -->
+                <input type="checkbox" id="exploration" name="category[]" value="Exploration">
+                <label for="exploration">Exploration</label>
 
+                <!-- Sandbox option -->
+                <input type="checkbox" id="sandbox" name="category[]" value="Sandbox">
+                <label for="sandbox">Sandbox</label>
+
+                <!-- Sci-Fi option -->
+                <input type="checkbox" id="sci_fi" name="category[]" value="Sci_Fi">
+                <label for="sci_fi">Sci-Fi</label>
+
+                <!-- Fighting option -->
+                <input type="checkbox" id="fighting" name="category[]" value="Fighting">
+                <label for="fighting">Fighting</label>
+                
+                <!-- Retro option -->
+                <input type="checkbox" id="retro" name="category[]" value="Retro">
+                <label for="retro">Retro</label>
+
+                <!-- Educational option -->
+                <input type="checkbox" id="educational" name="category[]" value="Educational">
+                <label for="educational">Educational</label>
+                
+                <!-- Battle Royale option -->
+                <input type="checkbox" id="battle_royale" name="category[]" value="Battle_Royale">
+                <label for="battle_royale">Battle Royale</label>
+                
+                <!-- Adventure option -->
+                <input type="checkbox" id="adventure" name="category[]" value="Adventure">
+                <label for="adventure">Adventure</label>
 
 
             </div>
 
-            <input class="submit" value="Submit">
+            <button class="submit" value="Submit">submit</button>
         </form>
     </section>
 
