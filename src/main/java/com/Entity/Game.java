@@ -25,4 +25,25 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+
+    public String getGenre() {
+        return genre;
+    }
+
+
+    public String getConsole() {
+        return console;
+    }
+
+   
 }

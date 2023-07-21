@@ -22,7 +22,7 @@ public class JpaTestRunner implements CommandLineRunner {
 
         // Find a Game by ID
         Game foundGame = gameService.getGameById(1);
-        System.out.println("Found Game by ID: " + foundGame);
+        System.out.println("Found Game by ID: " + foundGame.getTitle());
 
         // Find all Games
         Iterable<Game> allGames = gameService.getAllGames();
