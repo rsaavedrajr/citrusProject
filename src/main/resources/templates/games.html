@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>SplitBit - Browse Games</title>
     <link rel="stylesheet" href="gamesStyles.css">
@@ -27,27 +28,14 @@
     <!-- Game Grid Section -->
     <section class="game-grid-section">
         <h2>Browse Games</h2>
-        <div class="game-grid">
-            <!-- Game 1 -->
-            <div class="game-item">
-                <img src="https://healthnewshub.org/wp-content/uploads/2018/03/NewsFortnite.jpg" alt="Game 1">
-                <h3>Game 1</h3>
+        <div class="grid-container">
+            <!-- Loop through the games and display their information -->
+            <div th:each="Game : ${games}" class="game-item">
+                <img th:src="${Game.imageUrl}" alt="Game Image" />
+                <h3 th:text="${Game.title}"></h3>
+                <p th:text="${Game.genres}"></p>
+                <!-- Add more game information as needed -->
             </div>
-
-            <!-- Game 2 -->
-            <div class="game-item">
-                <img src="game2.jpg" alt="Game 2">
-                <h3>Game 2</h3>
-            </div>
-
-            <!-- Game 3 -->
-            <div class="game-item">
-                <img src="game3.jpg" alt="Game 3">
-                <h3>Game 3</h3>
-            </div>
-
-            <!-- Add more game items as needed -->
-        </div>
     </section>
 
     <!-- Footer -->

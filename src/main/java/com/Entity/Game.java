@@ -25,6 +25,9 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(name = "imageUrl")
+    private String image;
+
 
     // Getters
     public int getId() {
