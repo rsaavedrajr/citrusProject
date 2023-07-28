@@ -26,16 +26,15 @@
     </header>
 
     <!-- Game Grid Section -->
-    <section class="game-grid-section">
-        <h2>Browse Games</h2>
-        <div class="grid-container">
-            <!-- Loop through the games and display their information -->
-            <div th:each="Game : ${games}" class="game-item">
-                <img th:src="${Game.image}" alt="Game Image" />
-                <h3 th:text="${Game.title}"></h3>
-                <p th:text="${Game.genre}"></p>
-                <!-- Add more game information as needed -->
-            </div>
+    
+    <h2>All Games</h2>
+    <section class="grid-container">
+        <div th:each="Game : ${games}" class="game-item">
+            <img th:src="${Game.image}" alt="Game Image" />
+            <h3 th:text="${Game.title}"></h3>
+            <p th:text="${Game.genre}"></p>
+            <!-- Add more game information as needed -->
+        </div>
     </section>
 
     <!-- Footer -->
