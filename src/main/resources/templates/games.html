@@ -31,9 +31,9 @@
         <div class="grid-container">
             <!-- Loop through the games and display their information -->
             <div th:each="Game : ${games}" class="game-item">
-                <img th:src="${Game.imageUrl}" alt="Game Image" />
+                <img th:src="${Game.image}" alt="Game Image" />
                 <h3 th:text="${Game.title}"></h3>
-                <p th:text="${Game.genres}"></p>
+                <p th:text="${Game.genre}"></p>
                 <!-- Add more game information as needed -->
             </div>
     </section>

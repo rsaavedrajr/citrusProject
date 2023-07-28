@@ -25,7 +25,7 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "imageUrl")
+    @Column(name="image_url")
     private String image;
 
 
@@ -46,6 +46,10 @@ public class Game {
 
     public String getConsole() {
         return console;
+    }
+
+    public String getImage() {
+        return image;
     }
 
    
