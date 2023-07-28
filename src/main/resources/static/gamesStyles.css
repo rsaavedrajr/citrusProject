@@ -1,12 +1,12 @@
 /* Reset some default styles */
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Basic styling */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     min-height: 100vh;
@@ -22,7 +22,6 @@ body {
 
 /* Header */
 header {
-    margin: 0;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -72,80 +71,30 @@ header {
     cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-    background-color: #222;
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-}
 
-.hero-content h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.survey-button {
-    background-color: #ff3b3b;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.survey-button:hover {
-    background-color: #d62c2c;
-}
-
-/* Featured Games */
-.featured-games {
+/* Game Grid Section */
+.game-grid-section {
     padding: 40px 0;
     text-align: center;
 }
 
-.featured-games h2 {
-    font-size: 36px;
+.game-grid-section h2 {
+    font-size: 28px;
     font-weight: bold;
-    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .game-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 20px;
     justify-items: center;
-    margin-bottom: 100px;
+    max-height: 700px; /* Set a maximum height for the game grid section */
+    overflow-y: scroll; /* Enable vertical scrolling for the game grid section */
 }
 
-.game-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
-    margin-left: 10px;
-    margin-right: 10px; 
-}
 
 .game-item img {
-    width: 280px;
-    height: 200px;
-}
-
-
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
+    width: 175px;
+    height: 175px;
 }

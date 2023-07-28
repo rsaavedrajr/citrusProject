@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SplitBit - Browse Games</title>
+    <link rel="stylesheet" href="gamesStyles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>SplitBit</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Favorites</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Game Grid Section -->
+    <section class="game-grid-section">
+        <h2>Browse Games</h2>
+        <div class="grid-container">
+            <!-- Loop through the games and display their information -->
+            <div th:each="Game : ${games}" class="game-item">
+                <img th:src="${Game.image}" alt="Game Image" />
+                <h3 th:text="${Game.title}"></h3>
+                <p th:text="${Game.genre}"></p>
+                <!-- Add more game information as needed -->
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>

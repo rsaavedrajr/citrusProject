@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SplitBit - Game Categories</title>
+    <link rel="stylesheet" href="SurveyStyles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="cancel-button">x</a>
+    </header>
+
+    <!-- Category Selection Section -->
+    <section class="category-section">
+        <h2>select your game preferences for better recommendations:</h2>
+        <form action="submit.php" method="POST"> <!-- replace "submit.php" with your form submission endpoint -->
+            <div class="category-checkboxes">
+
+                <!-- Action option -->
+                <input type="checkbox" id="action" name="category[]" value="Action">
+                <label for="action">Action</label>
+
+                <!-- stretegy option -->
+                <input type="checkbox" id="strategy" name="category[]" value="Strategy">
+                <label for="strategy">Strategy</label>
+
+                <!-- Sports option -->
+                <input type="checkbox" id="sports" name="category[]" value="Sports">
+                <label for="sports">Sports</label>
+
+                <!-- Puzzle option -->
+                <input type="checkbox" id="puzzle" name="category[]" value="Puzzle">
+                <label for="puzzle">Puzzle</label>
+
+                <!-- Survival option -->
+                <input type="checkbox" id="survival" name="category[]" value="Survival">
+                <label for="survival">Survival</label>
+
+                <!-- Open World option -->
+                <input type="checkbox" id="open_world" name="category[]" value="Open_World">
+                <label for="open_world">Open World</label>
+                
+                <!-- Tactcial option -->
+                <input type="checkbox" id="tactical" name="category[]" value="Tactical">
+                <label for="tactical">Tactical</label>
+
+                <!--Party option -->
+                <input type="checkbox" id="party" name="category[]" value="Party">
+                <label for="party">Party</label>
+
+                <!-- Racing option -->
+                <input type="checkbox" id="racing" name="category[]" value="Racing">
+                <label for="racing">Racing</label>
+
+                <!-- Music option -->
+                <input type="checkbox" id="music" name="category[]" value="Music">
+                <label for="music">Music</label>
+
+                <!-- Add more checkboxes for other categories -->
+
+                <!-- Shooter option -->
+                <input type="checkbox" id="shooter" name="category[]" value="Shooter">
+                <label for="shooter">Shooter</label>
+
+                <!-- Thriller option -->
+                <input type="checkbox" id="thriller" name="category[]" value="Thriller">
+                <label for="thriller">Thriller</label>
+
+                <!-- Exploration option -->
+                <input type="checkbox" id="exploration" name="category[]" value="Exploration">
+                <label for="exploration">Exploration</label>
+
+                <!-- Sandbox option -->
+                <input type="checkbox" id="sandbox" name="category[]" value="Sandbox">
+                <label for="sandbox">Sandbox</label>
+
+                <!-- Sci-Fi option -->
+                <input type="checkbox" id="sci_fi" name="category[]" value="Sci_Fi">
+                <label for="sci_fi">Sci-Fi</label>
+
+                <!-- Fighting option -->
+                <input type="checkbox" id="fighting" name="category[]" value="Fighting">
+                <label for="fighting">Fighting</label>
+                
+                <!-- Retro option -->
+                <input type="checkbox" id="retro" name="category[]" value="Retro">
+                <label for="retro">Retro</label>
+
+                <!-- Educational option -->
+                <input type="checkbox" id="educational" name="category[]" value="Educational">
+                <label for="educational">Educational</label>
+                
+                <!-- Battle Royale option -->
+                <input type="checkbox" id="battle_royale" name="category[]" value="Battle_Royale">
+                <label for="battle_royale">Battle Royale</label>
+                
+                <!-- Adventure option -->
+                <input type="checkbox" id="adventure" name="category[]" value="Adventure">
+                <label for="adventure">Adventure</label>
+
+
+            </div>
+
+            <button class="submit" value="Submit">submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+
+</html>
