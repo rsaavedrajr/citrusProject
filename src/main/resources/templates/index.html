@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html xmlns:th="http://www.thymeleaf.org"></html>
 <head>
     <title>SplitBit - Discover Your Next Favorite Game</title>
     <link rel="stylesheet" href="/main.css">
@@ -12,7 +12,7 @@
                 <h1>SplitBit</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#top">Home</a></li>
+                <li><a href="/index">Home</a></li>
                 <li><a href="/games">Games</a></li>
                 <!-- <li><a href="#">Genres</a></li>
                 <li><a href="#">Favorites</a></li> -->
@@ -33,40 +33,17 @@
         </div>
     </section>
 
-    <!-- Featured Games -->
-    <section class="featured-games">
+    
 
-        <div class="game-grid">
-            <!-- Game 1 -->
-            <div class="game-item">
-                <img src="https://images.immediate.co.uk/production/volatile/sites/3/2023/05/Mortal-Kombat-1-release-date-88003ec.jpg?quality=90&resize=980,654" alt="Game 1">
-                <h3>Mortal Combat 1</h3>
-            </div>
-
-            <!-- Game 2 -->
-            <div class="game-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo11kiQHiZXFeS2dLpAyA9hfY-535_26ubBA&usqp=CAU" alt="Game 2">
-                <h3>Street Fighter 6</h3>
-            </div>
-
-            <!-- Game 3 -->
-            <div class="game-item">
-                <img src="https://www.gameaccessibilitynexus.com/wp-content/uploads/2020/12/cyberpunk-1920x1080.jpg" alt="Game 3">
-                <h3>Cyberpunk 2077</h3>
-            </div>
-
-            <!-- Add more game items as needed -->
-        </div>
-
-        <section class="grid-container">
-            <div th:="Game : ${games}" class="game-item">
+        <section class="featured-games">
+            <div th:each="Game : ${games}" class="game-item">
                 <img th:src="${Game.image}" alt="Game Image" />
-                <h3 th:text="${Game.title}"></h3>
                 <!-- Add more game information as needed -->
             </div>
+        </section>
 
-        <h2>Games Coming Soon</h2>
-    </section>
+
+        <h2>Here's a few recommendations!</h2>
 
     <!-- Footer -->
     <footer>
