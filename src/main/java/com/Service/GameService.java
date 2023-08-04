@@ -1,4 +1,5 @@
 package com.Service;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,12 @@ public class GameService {
 
     public List<Game> getGamesByCategories(List<String> selectedCategories) {
         return gameRepository.findByGenreIn(selectedCategories);
+    }
+
+    public List<Game> getRandomGamesSubset(List<Game> games, int size) {
+        Collections.shuffle(games);
+        return games.subList(0, size - 1);
+    
     }
 
 }

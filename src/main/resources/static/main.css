@@ -107,23 +107,23 @@ header {
 
 /* Featured Games */
 .featured-games {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.featured-games h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 0px;
-}
-
-.game-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr); /* Three columns, adjust as needed */
+    grid-gap: 40px; /* Space between grid items */
     justify-items: center;
-    margin-bottom: 100px;
+    margin-top: 40px;
+    align-items: center;
 }
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0;
+    align-self: center;
+    margin-top: 40px;
+    
+}
+
 
 .game-item {
     background-color: #fff;
@@ -132,11 +132,14 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
     margin-left: 10px;
     margin-right: 10px; 
+    height: fit-content;
+    width: fit-content;
+    justify-items: center;
 }
 
 .game-item img {
-    width: 280px;
-    height: 200px;
+    width: 175px;
+    height: 175px;
 }
 
 
