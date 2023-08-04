@@ -26,18 +26,12 @@ public class GameController {
     @PostMapping("/games")
     public String gamesPage(Model model) {
         List<Game> games = gameService.getAllGames();
-        model.addAttribute("games", games);
+        List<Game> randomGames = gameService.getRandomGamesSubset(games, 30);
+        model.addAttribute("games", randomGames);
         return "games"; 
     }
 
 
-    private List<Game> getRandomGamesSubset(List<Game> games) {
-        if (games.size() <= 3){
-            return games;
-        } else {
-            Collections.shuffle(games);
-            return games.subList(0, 3);
-        }
-    }
+    
     
 }
