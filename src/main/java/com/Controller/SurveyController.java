@@ -1,6 +1,5 @@
 package com.Controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,7 @@ public class SurveyController {
 
     @PostMapping("/games")
     public String filterGames(@RequestParam("categories") List<String> selectedCategories, Model model) {
+        model.addAttribute("pageTitle", "Your Games");
         List<Game> filteredGames = gameService.getGamesByCategories(selectedCategories);
         model.addAttribute("games", filteredGames);
         return "games";

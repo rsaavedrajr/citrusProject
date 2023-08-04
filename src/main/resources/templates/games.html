@@ -15,7 +15,7 @@
             <ul class="nav-links">
                 <li><a href="/index">Home</a></li>
                 <li><a href="/games">Games</a></li>
-                <!-- <li><a href="#">Genres</a></li> -->
+                <li><a href="/genres">Genres</a></li> 
                 <!-- <li><a href="#">Favorites</a></li> -->
             </ul>
             <!-- <div class="search-bar"> 
@@ -27,7 +27,7 @@
 
     <!-- Game Grid Section -->
     
-    <h2>All Games</h2>
+    <h2 th:text="${pageTitle}"></h2>
     <section class="grid-container">
         <div th:each="Game : ${games}" class="game-item">
             <img th:src="${Game.image}" alt="Game Image" />
