@@ -32,9 +32,15 @@ public class GameService {
         return gameRepository.findByGenreIn(selectedCategories);
     }
 
+    public List<Game> getGamesByCategory(String category) {
+        return gameRepository.findByGenre(category);
+    }
+
+
+
     public List<Game> getRandomGamesSubset(List<Game> games, int size) {
         Collections.shuffle(games);
-        return games.subList(0, size - 1);
+        return games.subList(0, size);
     
     }
 
