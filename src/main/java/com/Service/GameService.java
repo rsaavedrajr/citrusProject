@@ -13,8 +13,8 @@ public class GameService {
     private final GameRepository gameRepository;
 
     @Autowired
-    public GameService(GameRepository givenGameRepository) {
-        this.gameRepository = givenGameRepository;
+    public GameService(GameRepository givenGameRepo) {
+        this.gameRepository = givenGameRepo;
     }
 
     // Read-only methods
@@ -25,6 +25,10 @@ public class GameService {
 
     public List<Game> getAllGames() {
         return gameRepository.findAll();
+    }
+
+    public List<Game> getGamesByCategories(List<String> selectedCategories) {
+        return gameRepository.findByGenreIn(selectedCategories);
     }
 
 }

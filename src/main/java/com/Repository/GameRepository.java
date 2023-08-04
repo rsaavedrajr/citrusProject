@@ -11,5 +11,7 @@ import com.Entity.Game;
 public interface GameRepository extends JpaRepository<Game, Integer>  {
     
     List<Game> findByGenre(String genre);
+
+    List<Game> findByGenreIn(List<String> categories);
     
 }

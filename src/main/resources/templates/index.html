@@ -14,13 +14,13 @@
             <ul class="nav-links">
                 <li><a href="#top">Home</a></li>
                 <li><a href="/games">Games</a></li>
-                <li><a href="#">Genres</a></li>
-                <li><a href="#">Favorites</a></li>
+                <!-- <li><a href="#">Genres</a></li>
+                <li><a href="#">Favorites</a></li> -->
             </ul>
-            <div class="search-bar">
+            <!--<div class="search-bar">
                 <input type="text" placeholder="Search...">
                 <button type="submit">Search</button>
-            </div>
+            </div> -->
         </nav>
     </header>
 
@@ -29,7 +29,7 @@
         <div class="hero-content">
             <h2>Discover Your Next Favorite Game</h2>
             <p>Explore a vast library of video games according to your interests!</p>
-            <a href="/survey.html" class="survey-button">Find Games</a>
+            <a href="/survey" class="survey-button">Find Games</a>
         </div>
     </section>
 
@@ -57,6 +57,14 @@
 
             <!-- Add more game items as needed -->
         </div>
+
+        <section class="grid-container">
+            <div th:="Game : ${games}" class="game-item">
+                <img th:src="${Game.image}" alt="Game Image" />
+                <h3 th:text="${Game.title}"></h3>
+                <!-- Add more game information as needed -->
+            </div>
+
         <h2>Games Coming Soon</h2>
     </section>
 
