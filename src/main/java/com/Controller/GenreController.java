@@ -31,8 +31,14 @@ public class GenreController {
         List<Game> adventureGames = gameService.getGamesByCategory("Adventure");
         model.addAttribute("adventureGames", adventureGames);
 
+        List<Game> battleroyaleGames = gameService.getGamesByCategory("Battle_Royale");
+        model.addAttribute("battleroyaleGames", battleroyaleGames);
+
         List<Game> fightingGames = gameService.getGamesByCategory("Fighting");
         model.addAttribute("fightingGames", fightingGames);
+
+         List<Game> musicGames = gameService.getGamesByCategory("Music");
+        model.addAttribute("musicGames", musicGames);
 
         List<Game> open_worldGames = gameService.getGamesByCategory("Open_World");
         model.addAttribute("openworldGames", open_worldGames);
@@ -49,8 +55,14 @@ public class GenreController {
         List<Game> retroGames = gameService.getGamesByCategory("Retro");
         model.addAttribute("retroGames", retroGames);
 
+         List<Game> shooterGames = gameService.getGamesByCategory("Shooter");
+        model.addAttribute("shooterGames", shooterGames);
+
         List<Game> sportsGames = gameService.getGamesByCategory("Sports");
         model.addAttribute("sportsGames", sportsGames);
+
+         List<Game> strategyGames = gameService.getGamesByCategory("Strategy");
+        model.addAttribute("strategyGames", strategyGames);
 
         List<Game> survivalGames = gameService.getGamesByCategory("Survival");
         model.addAttribute("survivalGames", survivalGames);

@@ -37,7 +37,7 @@ header {
 .category-section h2 {
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     font-variant: small-caps;
 }
 
@@ -50,7 +50,7 @@ header {
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: -75px;
+    margin-bottom: -30px;
     text-align: left;
     font-size: 18px;
 }

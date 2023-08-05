@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"></html>
 <head>
-    <title>SplitBit - Discover Your Next Favorite Game</title>
+    <title>SplitBit</title>
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
@@ -26,8 +26,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="container">
+            <p class="text">Discover Your Next Favorite Game</p>
+        </div>
         <div class="hero-content">
-            <h2>Discover Your Next Favorite Game</h2>
             <p>Explore a vast library of video games according to your interests!</p>
             <a href="/survey" class="survey-button">Find Games</a>
         </div>
@@ -38,12 +40,14 @@
         <section class="featured-games">
             <div th:each="Game : ${games}" class="game-item">
                 <img th:src="${Game.image}" alt="Game Image" />
+                <h2 th:text="${Game.title}"></h3>
+
                 <!-- Add more game information as needed -->
             </div>
         </section>
 
 
-        <h2>Here's a few recommendations!</h2>
+        <h3>Here's a few recommendations!</h3>
 
     <!-- Footer -->
     <footer>

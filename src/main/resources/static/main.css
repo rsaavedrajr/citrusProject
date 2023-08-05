@@ -1,8 +1,10 @@
+
 /* Reset some default styles */
 * {
     padding: 0;
     box-sizing: border-box;
 }
+
 
 /* Basic styling */
 body {
@@ -15,10 +17,30 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    display: inline-block;
 }
+
+.text{
+    font-size: 2em;
+    letter-spacing: 5px;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2.5s steps(32),
+        cursor .4s step-end infinite alternate;
+    margin-bottom: -5px;
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+
 
 /* Header */
 header {
@@ -30,7 +52,8 @@ header {
 }
 
 .logo h1 {
-    font-size: 40px;
+    font-size: 45px;
+    margin-top: -5px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -80,11 +103,14 @@ header {
     text-align: center;
 }
 
+/*
 .hero-content h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
 }
+*/
+
 
 .hero-content p {
     font-size: 18px;
@@ -116,25 +142,39 @@ header {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
-    margin-top: 0;
-    align-self: center;
+    text-align: center;
     margin-top: 40px;
     
 }
 
+.game-item h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+h3 {
+    font-size: 23px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
 
 .game-item {
-    background-color: #fff;
+    background-color: white;
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
     margin-left: 10px;
     margin-right: 10px; 
     height: fit-content;
-    width: fit-content;
+    width: min-content;
     justify-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .game-item img {
