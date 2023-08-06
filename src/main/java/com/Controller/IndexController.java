@@ -1,5 +1,7 @@
 package com.Controller;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +31,14 @@ public class IndexController {
     @GetMapping("/index")
     public String homePage(Model model) {
         List<Game> allGames = gameService.getAllGames();
-        List<Game> games = gameService.getRandomGamesSubset(allGames, 3);
-        model.addAttribute("games", games);
-        return "index"; 
+        List<List<Game>> gamesModel = new ArrayList<>();
+        List<Game> newRow;
+        for (int i = 0; i < 20; i++) {
+            newRow = gameService.getRandomGamesSubset(allGames, 3);
+            gamesModel.add(newRow);
+        }
+        
+        model.addAttribute("randomGames", gamesModel);
+        return "index";
     }
 }

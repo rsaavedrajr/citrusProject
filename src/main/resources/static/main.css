@@ -131,15 +131,7 @@ header {
     background-color: #d62c2c;
 }
 
-/* Featured Games */
-.featured-games {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns, adjust as needed */
-    grid-gap: 40px; /* Space between grid items */
-    justify-items: center;
-    margin-top: 40px;
-    align-items: center;
-}
+
 
 h2 {
     font-size: 15px;
@@ -163,19 +155,50 @@ h3 {
 }
 
 
-.game-item {
-    background-color: white;
+
+.game-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /*grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;*/
+  }
+
+  .game-row {
+    position: absolute;
+    display: flex;
+    justify-content: space-between; /* Spread items evenly */
+    width: auto; /* Expand to full width */
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .game-item {
+    display: flex;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;
     height: fit-content;
     width: min-content;
-    justify-items: center;
+    justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 30px;
-}
+    flex-basis: calc(33.33% - 10px); /* 3 cells per row */
+  }
+  
+  .game-row.animate {
+    opacity: 1; /* Show row */
+    
+  }
+
+
 
 .game-item img {
     width: 175px;

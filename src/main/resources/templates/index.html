@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
+
 <head>
     <title>SplitBit</title>
     <link rel="stylesheet" href="/main.css">
+    </link>
+
+    <script>
+        var currentIndex = 0;
+        var randomGameContainer = document.getElementById('randomGameContainer');
+
+        function updateRandomGame() {
+            currentIndex = (currentIndex + 1) % randomGames.length;
+            var randomGame = randomGames[currentIndex];
+
+            randomGameContainer.innerHTML = `
+                <img th:src="${randomGame.image}" alt="Game Image" />
+                <h2 th:text="${randomGame.title}"></h3>
+            `;
+        }
+
+        // Initial update
+        updateRandomGame();
+
+        // Update every 5 seconds
+        setInterval(updateRandomGame, 5000);
+    </script>
+
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -35,23 +62,48 @@
         </div>
     </section>
 
-    
+    <h3>Here's a few recommendations!</h3>
 
-        <section class="featured-games">
-            <div th:each="Game : ${games}" class="game-item">
-                <img th:src="${Game.image}" alt="Game Image" />
-                <h2 th:text="${Game.title}"></h3>
 
-                <!-- Add more game information as needed -->
+    <div th:each="gameRows : ${randomGames}" class="game-container">
+        <div class="game-row">
+            <div th:each="games: ${gameRows}">
+                <div th:each="Game : ${games}" class="game-item">
+
+                    <img th:src="${Game.image}" alt="Game Image"></img>
+                    <h3 th:text="${Game.title}"></h3>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const rows = document.querySelectorAll('.game-row');
+            let currentRowIndex = 0;
+
+            function showNextRow() {
+                if (currentRowIndex > 0) {
+                    rows[currentRowIndex - 1].classList.remove('animate');
+                    rows[currentRowIndex].classList.add('animate');
+                }else{
+                    rows[currentRowIndex].classList.add('animate');
+                }
+                currentRowIndex = (currentRowIndex + 1) % rows.length;
+            }
+
+            setInterval(showNextRow, 2000); // Show next row every 2 seconds
+        });
 
 
-        <h3>Here's a few recommendations!</h3>
+    </script>
+
+
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2023 SplitBit. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
