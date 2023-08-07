@@ -30,15 +30,22 @@ public class IndexController {
 
     @GetMapping("/index")
     public String homePage(Model model) {
-        List<Game> allGames = gameService.getAllGames();
+        List<Game> games = gameService.getAllGames();
+        List<Game> randomGames = gameService.getRandomGamesSubset(games, 159);
         List<List<Game>> gamesModel = new ArrayList<>();
-        List<Game> newRow;
         for (int i = 0; i < 20; i++) {
-            newRow = gameService.getRandomGamesSubset(allGames, 3);
-            gamesModel.add(newRow);
+            List<Game> newRow = gameService.getRandomGamesSubset(randomGames, 3);
+
+            System.out.println(newRow.get(0).getTitle());
+            System.out.println(newRow.get(1).getTitle());
+            System.out.println(newRow.get(2).getTitle());
+            gamesModel.add(new ArrayList<>(newRow));
+        }
+
+        for (int i = 0; i < 20; i++) {
         }
         
-        model.addAttribute("randomGames", gamesModel);
+        model.addAttribute("gamesModel", gamesModel);
         return "index";
     }
 }

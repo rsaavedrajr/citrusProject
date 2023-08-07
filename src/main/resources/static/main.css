@@ -1,6 +1,7 @@
 
 /* Reset some default styles */
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -30,7 +31,7 @@ body {
     animation:
         typing 2.5s steps(32),
         cursor .4s step-end infinite alternate;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
 }
 
 @keyframes cursor {
@@ -124,6 +125,7 @@ header {
     font-weight: bold;
     padding: 12px 24px;
     border-radius: 4px;
+    margin-bottom: 10px;
     transition: background-color 0.3s;
 }
 
@@ -142,7 +144,7 @@ h2 {
 }
 
 .game-item h2 {
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 10px;
     margin-bottom: -5px;
 }
@@ -151,25 +153,22 @@ h3 {
     font-size: 23px;
     font-weight: bold;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 35px;
+    margin-bottom: 20px;
 }
 
 
 
 .game-container {
-    position: relative;
     display: flex;
+    height: fit-content;
     justify-content: center;
-    /*grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 40px;
-    justify-content: center;
-    margin-top: 40px;
-    align-items: center;*/
+    overflow: hidden;
   }
 
   .game-row {
     position: absolute;
+    height: fit-content;
     display: flex;
     justify-content: space-between; /* Spread items evenly */
     width: auto; /* Expand to full width */
@@ -183,14 +182,13 @@ h3 {
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 65px;
+    margin-right: 65px;
     height: fit-content;
+    flex-direction: column;
     width: min-content;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    flex-basis: calc(33.33% - 10px); /* 3 cells per row */
+    flex-basis: calc(33.33% - 30px); /* 3 cells per row */
   }
   
   .game-row.animate {
@@ -201,8 +199,8 @@ h3 {
 
 
 .game-item img {
-    width: 175px;
-    height: 175px;
+    width: 200px;
+    height: 200px;
 }
 
 
@@ -214,4 +212,5 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: auto;
+    margin-bottom: 0;
 }

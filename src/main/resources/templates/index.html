@@ -65,14 +65,11 @@
     <h3>Here's a few recommendations!</h3>
 
 
-    <div th:each="gameRows : ${randomGames}" class="game-container">
+    <div th:each="gameRow : ${gamesModel}" class="game-container">
         <div class="game-row">
-            <div th:each="games: ${gameRows}">
-                <div th:each="Game : ${games}" class="game-item">
-
-                    <img th:src="${Game.image}" alt="Game Image"></img>
-                    <h3 th:text="${Game.title}"></h3>
-                </div>
+            <div th:each="Game : ${gameRow}" class="game-item">
+                <img th:src="${Game.image}" alt="Game Image"></img>
+                <h3 th:text="${Game.title}"></h3>
             </div>
         </div>
     </div>
@@ -86,13 +83,18 @@
                 if (currentRowIndex > 0) {
                     rows[currentRowIndex - 1].classList.remove('animate');
                     rows[currentRowIndex].classList.add('animate');
-                }else{
+                } else {
                     rows[currentRowIndex].classList.add('animate');
                 }
-                currentRowIndex = (currentRowIndex + 1) % rows.length;
+                if (currentRowIndex == 19) {
+                    rows[currentRowIndex].classList.remove('animate');
+                    currentRowIndex = 1;
+                } else {
+                    currentRowIndex += 1;
+                }
             }
 
-            setInterval(showNextRow, 2000); // Show next row every 2 seconds
+            setInterval(showNextRow, 4000); // Show next row every 2 seconds
         });
 
 
