@@ -29,8 +29,8 @@ public class GameService {
         return gameRepository.findAll();
     }
 
-    public List<Game> getGamesByCategories(List<String> selectedCategories) {
-        return gameRepository.findByGenreIn(selectedCategories);
+    public List<Game> getGamesByCategories(List<String> categories) {
+        return gameRepository.findByGenreIn(categories);
     }
 
     public List<Game> getGamesByCategory(String category) {
@@ -39,15 +39,7 @@ public class GameService {
 
     public List<Game> getRandomGamesSubset(List<Game> games, int size) {
         Collections.shuffle(games);
-        if (size < 5) {
-            for (int i = 0; i < size; i++) {
-                System.out.println(games.get(i).getTitle());
-                System.out.println();
-                System.out.println();
-            }
-        }
         return games.subList(0, size);
-
     }
 
 }

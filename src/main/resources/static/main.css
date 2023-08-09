@@ -173,7 +173,7 @@ h3 {
     justify-content: space-between; /* Spread items evenly */
     width: auto; /* Expand to full width */
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1.0s;
   }
   
   .game-item {
@@ -184,7 +184,7 @@ h3 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 65px;
     margin-right: 65px;
-    height: fit-content;
+    height: 335px;
     flex-direction: column;
     width: min-content;
     justify-content: space-between;
@@ -199,8 +199,8 @@ h3 {
 
 
 .game-item img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
 }
 
 
