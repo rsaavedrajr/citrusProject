@@ -44,9 +44,29 @@
         </div>
     </section>
 
+
+    <h3>Battle Royale</h3>
+    <section class="grid-container">
+        <div th:each="Game : ${battleroyaleGames}" class="game-item">
+            <img th:src="${Game.image}" alt="Game Image" />
+            <h2 th:text="${Game.title}"></h2>
+            <!-- Add more game information as needed -->
+        </div>
+    </section>
+
+
     <h3>Fighting</h3>
     <section class="grid-container">
         <div th:each="Game : ${fightingGames}" class="game-item">
+            <img th:src="${Game.image}" alt="Game Image" />
+            <h2 th:text="${Game.title}"></h2>
+            <!-- Add more game information as needed -->
+        </div>
+    </section>
+
+    <h3>Music</h3>
+    <section class="grid-container">
+        <div th:each="Game : ${musicGames}" class="game-item">
             <img th:src="${Game.image}" alt="Game Image" />
             <h2 th:text="${Game.title}"></h2>
             <!-- Add more game information as needed -->
@@ -98,9 +118,28 @@
         </div>
     </section>
 
+
+    <h3>Shooter</h3>
+    <section class="grid-container">
+        <div th:each="Game : ${shooterGames}" class="game-item">
+            <img th:src="${Game.image}" alt="Game Image" />
+            <h2 th:text="${Game.title}"></h2>
+            <!-- Add more game information as needed -->
+        </div>
+    </section>
+
     <h3>Sports</h3>
     <section class="grid-container">
         <div th:each="Game : ${sportsGames}" class="game-item">
+            <img th:src="${Game.image}" alt="Game Image" />
+            <h2 th:text="${Game.title}"></h2>
+            <!-- Add more game information as needed -->
+        </div>
+    </section>
+
+    <h3>Strategy</h3>
+    <section class="grid-container">
+        <div th:each="Game : ${strategyGames}" class="game-item">
             <img th:src="${Game.image}" alt="Game Image" />
             <h2 th:text="${Game.title}"></h2>
             <!-- Add more game information as needed -->

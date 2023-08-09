@@ -29,7 +29,8 @@ header {
 }
 
 .logo h1 {
-    font-size: 40px;
+    font-size: 45px;
+    margin-top: -5px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -75,8 +76,9 @@ header {
 /* Grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns, adjust as needed */
+    grid-template-columns: repeat(4, 1fr); /* Three columns, adjust as needed */
     grid-gap: 40px; /* Space between grid items */
+
 }
 
 h2 {

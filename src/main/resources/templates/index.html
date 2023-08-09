@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"></html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+</html>
+
 <head>
-    <title>SplitBit - Discover Your Next Favorite Game</title>
+    <title>SplitBit</title>
     <link rel="stylesheet" href="/main.css">
+    </link>
+
+    <script>
+        var currentIndex = 0;
+        var randomGameContainer = document.getElementById('randomGameContainer');
+
+        function updateRandomGame() {
+            currentIndex = (currentIndex + 1) % randomGames.length;
+            var randomGame = randomGames[currentIndex];
+
+            randomGameContainer.innerHTML = `
+                <img th:src="${randomGame.image}" alt="Game Image" />
+                <h2 th:text="${randomGame.title}"></h3>
+            `;
+        }
+
+        // Initial update
+        updateRandomGame();
+
+        // Update every 5 seconds
+        setInterval(updateRandomGame, 5000);
+    </script>
+
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -26,28 +53,59 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="container">
+            <p class="text">Discover Your Next Favorite Game</p>
+        </div>
         <div class="hero-content">
-            <h2>Discover Your Next Favorite Game</h2>
             <p>Explore a vast library of video games according to your interests!</p>
             <a href="/survey" class="survey-button">Find Games</a>
         </div>
     </section>
 
-    
+    <h3>Here's a few recommendations!</h3>
 
-        <section class="featured-games">
-            <div th:each="Game : ${games}" class="game-item">
-                <img th:src="${Game.image}" alt="Game Image" />
-                <!-- Add more game information as needed -->
+
+    <div th:each="gameRow : ${gamesModel}" class="game-container">
+        <div class="game-row">
+            <div th:each="Game : ${gameRow}" class="game-item">
+                <img th:src="${Game.image}" alt="Game Image"></img>
+                <h3 th:text="${Game.title}"></h3>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const rows = document.querySelectorAll('.game-row');
+            let currentRowIndex = 0;
+
+            function showNextRow() {
+                if (currentRowIndex > 0) {
+                    rows[currentRowIndex - 1].classList.remove('animate');
+                    rows[currentRowIndex].classList.add('animate');
+                } else {
+                    rows[currentRowIndex].classList.add('animate');
+                }
+                if (currentRowIndex == 19) {
+                    rows[currentRowIndex].classList.remove('animate');
+                    currentRowIndex = 1;
+                } else {
+                    currentRowIndex += 1;
+                }
+            }
+
+            setInterval(showNextRow, 4000); // Show next row every 2 seconds
+        });
 
 
-        <h2>Here's a few recommendations!</h2>
+    </script>
+
+
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2023 SplitBit. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

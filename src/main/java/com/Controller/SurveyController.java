@@ -21,7 +21,6 @@ public class SurveyController {
 
     @GetMapping("/survey")
     public String showSurveyPage(Model model) {
-       // model.addAttribute("selectedCategories", new ArrayList<>());
         return "survey";
     }
 

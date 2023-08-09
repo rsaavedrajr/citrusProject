@@ -23,7 +23,7 @@ public class GameController {
     public String gamesPage(Model model) {
         model.addAttribute("pageTitle", "All Games");
         List<Game> games = gameService.getAllGames();
-        List<Game> randomGames = gameService.getRandomGamesSubset(games, 30);
+        List<Game> randomGames = gameService.getRandomGamesSubset(games, 159);
         model.addAttribute("games", randomGames);
         return "games"; 
     }

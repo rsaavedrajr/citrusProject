@@ -1,4 +1,5 @@
 package com.Service;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -28,23 +29,17 @@ public class GameService {
         return gameRepository.findAll();
     }
 
-    public List<Game> getGamesByCategories(List<String> selectedCategories) {
-        return gameRepository.findByGenreIn(selectedCategories);
+    public List<Game> getGamesByCategories(List<String> categories) {
+        return gameRepository.findByGenreIn(categories);
     }
 
     public List<Game> getGamesByCategory(String category) {
         return gameRepository.findByGenre(category);
     }
 
-
-
     public List<Game> getRandomGamesSubset(List<Game> games, int size) {
         Collections.shuffle(games);
         return games.subList(0, size);
-    
     }
 
 }
-
-
-

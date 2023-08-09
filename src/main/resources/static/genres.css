@@ -28,7 +28,8 @@ header {
 }
 
 .logo h1 {
-    font-size: 40px;
+    font-size: 45px;
+    margin-top: -5px;
     font-weight: bold;
     margin-bottom: 10px;
 }
