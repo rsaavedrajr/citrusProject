@@ -3,7 +3,6 @@ package com.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import com.Entity.Game; 
@@ -13,7 +12,6 @@ import com.Service.GameService;
 public class GameController {
     private final GameService gameService;
 
-    @Autowired
     public GameController(GameService gameService) {
         this.gameService = gameService;
     }
