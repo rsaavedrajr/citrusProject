@@ -1,0 +1,112 @@
+\doxysection{com.\+Controller.\+Survey\+Controller Class Reference}
+\hypertarget{classcom_1_1Controller_1_1SurveyController}{}\label{classcom_1_1Controller_1_1SurveyController}\index{com.Controller.SurveyController@{com.Controller.SurveyController}}
+
+
+This controller class manages functionality of the survey.\+html webpage.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}{show\+Survey\+Page}} (Model model)
+\begin{DoxyCompactList}\small\item\em Method gets the HTTP mapping of the survey page. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1}{filter\+Games}} (@Request\+Param("{}categories"{}) List$<$ String $>$ selected\+Categories, Model model)
+\begin{DoxyCompactList}\small\item\em Method posts the HTTP mapping of the games page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{game\+Service}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This controller class manages functionality of the survey.\+html webpage. 
+
+
+
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00019}{19}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1}\label{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1} 
+\index{com.Controller.SurveyController@{com.Controller.SurveyController}!filterGames@{filterGames}}
+\index{filterGames@{filterGames}!com.Controller.SurveyController@{com.Controller.SurveyController}}
+\doxysubsubsection{\texorpdfstring{filterGames()}{filterGames()}}
+{\footnotesize\ttfamily String com.\+Controller.\+Survey\+Controller.\+filter\+Games (\begin{DoxyParamCaption}\item[{@Request\+Param("{}categories"{}) List$<$ String $>$}]{selected\+Categories,  }\item[{Model}]{model }\end{DoxyParamCaption})}
+
+
+
+Method posts the HTTP mapping of the games page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected\+Categories} & List of Strings representing the categories selected by the user on the survey p \\
+\hline
+{\em model} & Model object sent to the browser to render dynamic content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String pointing to the games.\+html page 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00040}{40}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}Your\ Games"{}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ List<Game>\ filteredGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}{getGamesByCategories}}(selectedCategories);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ filteredGames);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}\label{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052} 
+\index{com.Controller.SurveyController@{com.Controller.SurveyController}!showSurveyPage@{showSurveyPage}}
+\index{showSurveyPage@{showSurveyPage}!com.Controller.SurveyController@{com.Controller.SurveyController}}
+\doxysubsubsection{\texorpdfstring{showSurveyPage()}{showSurveyPage()}}
+{\footnotesize\ttfamily String com.\+Controller.\+Survey\+Controller.\+show\+Survey\+Page (\begin{DoxyParamCaption}\item[{Model}]{model }\end{DoxyParamCaption})}
+
+
+
+Method gets the HTTP mapping of the survey page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Model object sent to the browser to render dynamic content \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String pointing to the survey.\+html page 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00030}{30}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}survey"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}\label{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e} 
+\index{com.Controller.SurveyController@{com.Controller.SurveyController}!gameService@{gameService}}
+\index{gameService@{gameService}!com.Controller.SurveyController@{com.Controller.SurveyController}}
+\doxysubsubsection{\texorpdfstring{gameService}{gameService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} com.\+Controller.\+Survey\+Controller.\+game\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00023}{23}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/\+Controller/\mbox{\hyperlink{SurveyController_8java}{Survey\+Controller.\+java}}\end{DoxyCompactItemize}

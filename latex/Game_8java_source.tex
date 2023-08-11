@@ -1,0 +1,60 @@
+\doxysection{Game.\+java}
+\hypertarget{Game_8java_source}{}\label{Game_8java_source}\index{src/main/java/com/Entity/Game.java@{src/main/java/com/Entity/Game.java}}
+\mbox{\hyperlink{Game_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00001}\mbox{\hyperlink{namespacecom_1_1Entity}{00001}}\ \textcolor{keyword}{package\ }com.Entity;}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00003}00003\ \textcolor{keyword}{import}\ jakarta.persistence.Column;}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00004}00004\ \textcolor{keyword}{import}\ jakarta.persistence.Entity;}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00005}00005\ \textcolor{keyword}{import}\ jakarta.persistence.GeneratedValue;}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00006}00006\ \textcolor{keyword}{import}\ jakarta.persistence.GenerationType;}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00007}00007\ \textcolor{keyword}{import}\ jakarta.persistence.Id;}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00012}00012\ @Entity}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00013}\mbox{\hyperlink{classcom_1_1Entity_1_1Game}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}}\ \{}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00014}00014\ \ \ \ \ @Column(name=\textcolor{stringliteral}{"{}Title"{}})}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00015}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760}{00015}}\ \ \ \ \ private\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760}{title}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00017}00017\ \ \ \ \ @Column(name="{}Genres"{})}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00018}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59}{00018}}\ \ \ \ \ private\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59}{genre}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00020}00020\ \ \ \ \ @Column(name="{}Price"{})}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00021}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a0a7629ad9fd75c8abdae289f13342514}{00021}}\ \ \ \ \ private\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a0a7629ad9fd75c8abdae289f13342514}{price}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00023}00023\ \ \ \ \ @Column(name="{}Console"{})}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00024}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92}{00024}}\ \ \ \ \ private\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92}{console}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00026}00026\ \ \ \ \ @Id}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00027}00027\ \ \ \ \ @Column(name="{}\textcolor{keywordtype}{id}"{},\ nullable\ =\ false,\ unique\ =\ true)}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00028}00028\ \ \ \ \ @GeneratedValue(strategy\ =\ GenerationType.AUTO)}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00029}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a58dd960d9233f0bdbdc7af68fd7042bc}{00029}}\ \ \ \ \ private\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00031}00031\ \ \ \ \ @Column(name="{}image\_url"{})}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00032}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f}{00032}}\ \ \ \ \ private\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f}{image}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00038}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a7fe9135b51f52eb236ac01039addf43e}{00038}}\ \ \ \ \ public\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a7fe9135b51f52eb236ac01039addf43e}{getId}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a58dd960d9233f0bdbdc7af68fd7042bc}{id}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00045}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a6273e1456d303b7e42a166d1f21b8a9c}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a6273e1456d303b7e42a166d1f21b8a9c}{getTitle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760}{title}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00053}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a866e773a10768e553f81872bac6b8507}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a866e773a10768e553f81872bac6b8507}{getGenre}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59}{genre}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00060}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a03e0e38f2291a1681d0311879906149d}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a03e0e38f2291a1681d0311879906149d}{getConsole}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92}{console}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00067}\mbox{\hyperlink{classcom_1_1Entity_1_1Game_a290c5071af99c809e8aee573ebc3c55c}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a290c5071af99c809e8aee573ebc3c55c}{getImage}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f}{image}};}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00071}00071\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Game_8java_source_l00072}00072\ \}}
+
+\end{DoxyCode}

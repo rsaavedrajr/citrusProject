@@ -1,0 +1,235 @@
+\doxysection{com.\+Entity.\+Game Class Reference}
+\hypertarget{classcom_1_1Entity_1_1Game}{}\label{classcom_1_1Entity_1_1Game}\index{com.Entity.Game@{com.Entity.Game}}
+
+
+This entity class represents a signle video game in the database.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a7fe9135b51f52eb236ac01039addf43e}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the id of a Game object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a6273e1456d303b7e42a166d1f21b8a9c}{get\+Title}} ()
+\begin{DoxyCompactList}\small\item\em Gets the title of a Game object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a866e773a10768e553f81872bac6b8507}{get\+Genre}} ()
+\begin{DoxyCompactList}\small\item\em Gets genre of a Game object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a03e0e38f2291a1681d0311879906149d}{get\+Console}} ()
+\begin{DoxyCompactList}\small\item\em Gets the console the game object can be played on. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a290c5071af99c809e8aee573ebc3c55c}{get\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Gets the image of a Game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760}{title}}
+\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59}{genre}}
+\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a0a7629ad9fd75c8abdae289f13342514}{price}}
+\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92}{console}}
+\item 
+int \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a58dd960d9233f0bdbdc7af68fd7042bc}{id}}
+\item 
+String \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f}{image}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This entity class represents a signle video game in the database. 
+
+These Games are stored in a Jpa Repository named Game\+Repository 
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00013}{13}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1Entity_1_1Game_a03e0e38f2291a1681d0311879906149d}\label{classcom_1_1Entity_1_1Game_a03e0e38f2291a1681d0311879906149d} 
+\index{com.Entity.Game@{com.Entity.Game}!getConsole@{getConsole}}
+\index{getConsole@{getConsole}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{getConsole()}{getConsole()}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+get\+Console (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the console the game object can be played on. 
+
+\begin{DoxyReturn}{Returns}
+console of Game object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00060}{60}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92}{console}};}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Entity_1_1Game_a866e773a10768e553f81872bac6b8507}\label{classcom_1_1Entity_1_1Game_a866e773a10768e553f81872bac6b8507} 
+\index{com.Entity.Game@{com.Entity.Game}!getGenre@{getGenre}}
+\index{getGenre@{getGenre}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{getGenre()}{getGenre()}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+get\+Genre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets genre of a Game object. 
+
+\begin{DoxyReturn}{Returns}
+genre of Game object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00053}{53}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59}{genre}};}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Entity_1_1Game_a7fe9135b51f52eb236ac01039addf43e}\label{classcom_1_1Entity_1_1Game_a7fe9135b51f52eb236ac01039addf43e} 
+\index{com.Entity.Game@{com.Entity.Game}!getId@{getId}}
+\index{getId@{getId}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int com.\+Entity.\+Game.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the id of a Game object. 
+
+\begin{DoxyReturn}{Returns}
+ID of the Game object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00038}{38}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a58dd960d9233f0bdbdc7af68fd7042bc}{id}};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Entity_1_1Game_a290c5071af99c809e8aee573ebc3c55c}\label{classcom_1_1Entity_1_1Game_a290c5071af99c809e8aee573ebc3c55c} 
+\index{com.Entity.Game@{com.Entity.Game}!getImage@{getImage}}
+\index{getImage@{getImage}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the image of a Game object. 
+
+\begin{DoxyReturn}{Returns}
+image of Game object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00067}{67}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f}{image}};}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Entity_1_1Game_a6273e1456d303b7e42a166d1f21b8a9c}\label{classcom_1_1Entity_1_1Game_a6273e1456d303b7e42a166d1f21b8a9c} 
+\index{com.Entity.Game@{com.Entity.Game}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the title of a Game object. 
+
+\begin{DoxyReturn}{Returns}
+title of Game object 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00045}{45}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760}{title}};}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92}\label{classcom_1_1Entity_1_1Game_ac2cc08778af10432ce0291ea397ebf92} 
+\index{com.Entity.Game@{com.Entity.Game}!console@{console}}
+\index{console@{console}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{console}{console}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+console\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00024}{24}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+\Hypertarget{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59}\label{classcom_1_1Entity_1_1Game_a10c0cf8323f668eb7ab74ed4c6b78b59} 
+\index{com.Entity.Game@{com.Entity.Game}!genre@{genre}}
+\index{genre@{genre}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{genre}{genre}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+genre\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00018}{18}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+\Hypertarget{classcom_1_1Entity_1_1Game_a58dd960d9233f0bdbdc7af68fd7042bc}\label{classcom_1_1Entity_1_1Game_a58dd960d9233f0bdbdc7af68fd7042bc} 
+\index{com.Entity.Game@{com.Entity.Game}!id@{id}}
+\index{id@{id}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int com.\+Entity.\+Game.\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00029}{29}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+\Hypertarget{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f}\label{classcom_1_1Entity_1_1Game_a14671d0aca09bd5b36f2db95a923b02f} 
+\index{com.Entity.Game@{com.Entity.Game}!image@{image}}
+\index{image@{image}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+image\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00032}{32}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+\Hypertarget{classcom_1_1Entity_1_1Game_a0a7629ad9fd75c8abdae289f13342514}\label{classcom_1_1Entity_1_1Game_a0a7629ad9fd75c8abdae289f13342514} 
+\index{com.Entity.Game@{com.Entity.Game}!price@{price}}
+\index{price@{price}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+price\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00021}{21}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+\Hypertarget{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760}\label{classcom_1_1Entity_1_1Game_ae1e98eecc94d940f0cec59cdfb820760} 
+\index{com.Entity.Game@{com.Entity.Game}!title@{title}}
+\index{title@{title}!com.Entity.Game@{com.Entity.Game}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily String com.\+Entity.\+Game.\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{Game_8java_source_l00015}{15}} of file \mbox{\hyperlink{Game_8java_source}{Game.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/\+Entity/\mbox{\hyperlink{Game_8java}{Game.\+java}}\end{DoxyCompactItemize}

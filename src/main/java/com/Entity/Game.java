@@ -6,6 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**  This entity class represents a signle video game in the database
+*
+* These Games are stored in a Jpa Repository named GameRepository
+*/
 @Entity
 public class Game {
     @Column(name="Title")
@@ -29,25 +33,43 @@ public class Game {
     private String image;
 
 
-    // Getters
+    /** Gets the id of a Game object
+    *
+    * @returns ID of the Game object
+    */
     public int getId() {
         return id;
     }
 
+    /** Gets the title of a Game object
+    *
+    * @returns title of Game object
+    */
     public String getTitle() {
         return title;
     }
 
 
+    /** Gets genre of a Game object
+    *
+    * @returns genre of Game object
+    */
     public String getGenre() {
         return genre;
     }
 
-
+    /** Gets the console the game object can be played on
+    *
+    * @returns console of Game object
+    */
     public String getConsole() {
         return console;
     }
 
+    /**  Gets the image of a Game object
+    *
+    * @returns image of Game object
+    */
     public String getImage() {
         return image;
     }

@@ -4,23 +4,35 @@ package com.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 import java.util.List;
 import com.Entity.Game; 
 import com.Service.GameService;
 
+/** This controller class manages functionality of the genres.html webpage
+*
+*/
 @Controller
 public class GenreController {
+
+    /** The service used by this controller to perform operations.
+    */
     private final GameService gameService;
 
-    @Autowired
+    /** Sets the GenreController's GameService to the given GameService object
+    *
+    * @param gameService GameService object used by this controller
+    */
     public GenreController(GameService gameService) {
         this.gameService = gameService;
     }
 
-
+    /** Method used to get the HTTP mapping for the home genres.html page
+    *
+    * @param model Model object used to render dynamic content on the genres page
+    * @returns String representing the genres.html page
+    */
     @GetMapping("/genres")
     public String genresPage(Model model) {
         model.addAttribute("pageTitle", "All Games");

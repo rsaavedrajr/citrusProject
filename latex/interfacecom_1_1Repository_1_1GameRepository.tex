@@ -1,0 +1,73 @@
+\doxysection{com.\+Repository.\+Game\+Repository Interface Reference}
+\hypertarget{interfacecom_1_1Repository_1_1GameRepository}{}\label{interfacecom_1_1Repository_1_1GameRepository}\index{com.Repository.GameRepository@{com.Repository.GameRepository}}
+
+
+This class extends Jpa\+Repository to assist in doing CRUD operations on our database.  
+
+
+Inheritance diagram for com.\+Repository.\+Game\+Repository\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interfacecom_1_1Repository_1_1GameRepository}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ \mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952}{find\+By\+Genre}} (String genre)
+\begin{DoxyCompactList}\small\item\em This method fethes all Game objects matching the specified genre. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ \mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_a4a50a5871be567d5c66953ef074e0eb5}{find\+By\+Genre\+In}} (List$<$ String $>$ categories)
+\begin{DoxyCompactList}\small\item\em This method fethes all Game objects that fall within the specified genres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class extends Jpa\+Repository to assist in doing CRUD operations on our database. 
+
+
+
+Definition at line \mbox{\hyperlink{GameRepository_8java_source_l00014}{14}} of file \mbox{\hyperlink{GameRepository_8java_source}{Game\+Repository.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952}\label{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952} 
+\index{com.Repository.GameRepository@{com.Repository.GameRepository}!findByGenre@{findByGenre}}
+\index{findByGenre@{findByGenre}!com.Repository.GameRepository@{com.Repository.GameRepository}}
+\doxysubsubsection{\texorpdfstring{findByGenre()}{findByGenre()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ com.\+Repository.\+Game\+Repository.\+find\+By\+Genre (\begin{DoxyParamCaption}\item[{String}]{genre }\end{DoxyParamCaption})}
+
+
+
+This method fethes all Game objects matching the specified genre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genre} & String representing a video game genre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of Game objects within the given genre 
+\end{DoxyReturn}
+\Hypertarget{interfacecom_1_1Repository_1_1GameRepository_a4a50a5871be567d5c66953ef074e0eb5}\label{interfacecom_1_1Repository_1_1GameRepository_a4a50a5871be567d5c66953ef074e0eb5} 
+\index{com.Repository.GameRepository@{com.Repository.GameRepository}!findByGenreIn@{findByGenreIn}}
+\index{findByGenreIn@{findByGenreIn}!com.Repository.GameRepository@{com.Repository.GameRepository}}
+\doxysubsubsection{\texorpdfstring{findByGenreIn()}{findByGenreIn()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ com.\+Repository.\+Game\+Repository.\+find\+By\+Genre\+In (\begin{DoxyParamCaption}\item[{List$<$ String $>$}]{categories }\end{DoxyParamCaption})}
+
+
+
+This method fethes all Game objects that fall within the specified genres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em List} & of Strings representing the video game categories \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of Game objects within the given genres Listed in the parameter List 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/\+Repository/\mbox{\hyperlink{GameRepository_8java}{Game\+Repository.\+java}}\end{DoxyCompactItemize}
