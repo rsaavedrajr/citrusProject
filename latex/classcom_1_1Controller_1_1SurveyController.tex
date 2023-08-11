@@ -16,7 +16,7 @@ String \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1f
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{game\+Service}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The service used by this controller to perform operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -51,16 +51,16 @@ String pointing to the games.\+html page
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00040}{40}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00043}{43}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}Your\ Games"{}});}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ List<Game>\ filteredGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}{getGamesByCategories}}(selectedCategories);}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ filteredGames);}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};}
-\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}Your\ Games"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ List<Game>\ filteredGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}{getGamesByCategories}}(selectedCategories);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ filteredGames);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \Hypertarget{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}\label{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052} 
@@ -83,13 +83,13 @@ String pointing to the survey.\+html page
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00030}{30}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00032}{32}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}survey"{}};}
-\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}survey"{}};}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -103,7 +103,11 @@ Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00030}{30}} o
 
 
 
-Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00023}{23}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
+The service used by this controller to perform operations. 
+
+
+
+Definition at line \mbox{\hyperlink{SurveyController_8java_source_l00024}{24}} of file \mbox{\hyperlink{SurveyController_8java_source}{Survey\+Controller.\+java}}.
 
 
 

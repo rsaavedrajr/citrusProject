@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['redirecttoindex_0',['redirectToIndex',['../classcom_1_1Controller_1_1IndexController.html#aee51de4f4e5b9b1d8e230819cd6132a0',1,'com::Controller::IndexController']]]
+  ['main_0',['main',['../classcom_1_1SpringBoot_1_1DemoApplication.html#ab5fa7334aba3988afaecdb1431a45217',1,'com::SpringBoot::DemoApplication']]]
 ];

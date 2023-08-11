@@ -4,7 +4,7 @@ var indexSectionsWithContent =
   1: "dgis",
   2: "c",
   3: "dgirs",
-  4: "fghimrs",
+  4: "dfghimrs",
   5: "cgipt",
   6: "c"
 };

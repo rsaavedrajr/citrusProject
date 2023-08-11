@@ -13,30 +13,30 @@
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.PostMapping;}
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.RequestParam;}
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00012}00012\ \textcolor{keyword}{import}\ com.Service.GameService;}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00013}00013\ \textcolor{keyword}{import}\ com.Entity.Game;}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00012}00012\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacecom}{com}}.\mbox{\hyperlink{namespacecom_1_1Service}{Service}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{GameService}};}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00013}00013\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacecom}{com}}.\mbox{\hyperlink{namespacecom_1_1Entity}{Entity}}.\mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}};}
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00014}00014\ }
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00018}00018\ @Controller}
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00019}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController}{00019}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController}{SurveyController}}\ \{}
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00022}00022\ \ \ \ \ @Autowired}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00023}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{00023}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{GameService}}\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}};}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00029}00029\ \ \ \ \ @GetMapping(\textcolor{stringliteral}{"{}/survey"{}})}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00030}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}{00030}}\ \ \ \ \ public\ String\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}{showSurveyPage}}(Model\ model)\ \{}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}survey"{}};}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00032}00032\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00039}00039\ \ \ \ \ @PostMapping(\textcolor{stringliteral}{"{}/games"{}})}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00040}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1}{00040}}\ \ \ \ \ public\ String\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1}{filterGames}}(@RequestParam("{}categories"{})\ List<String>\ selectedCategories,\ Model\ model)\ \{}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}Your\ Games"{}});}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ List<Game>\ filteredGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}{getGamesByCategories}}(selectedCategories);}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ filteredGames);}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00045}00045\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00023}00023\ \ \ \ \ @Autowired}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00024}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{00024}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{GameService}}\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}};}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00031}00031\ \ \ \ \ @GetMapping(\textcolor{stringliteral}{"{}/survey"{}})}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00032}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}{00032}}\ \ \ \ \ public\ String\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a199dbc1dbc6dcd7d51e05fcdde337052}{showSurveyPage}}(Model\ model)\ \{}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}survey"{}};}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00042}00042\ \ \ \ \ @PostMapping(\textcolor{stringliteral}{"{}/games"{}})}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00043}\mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1}{00043}}\ \ \ \ \ public\ String\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_ae975e1e29b1fc1b3feed4fdbb1ce20e1}{filterGames}}(@RequestParam("{}categories"{})\ List<String>\ selectedCategories,\ Model\ model)\ \{}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}Your\ Games"{}});}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ List<Game>\ filteredGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1SurveyController_a747c9b74a38f028657ef5345da52a52e}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}{getGamesByCategories}}(selectedCategories);}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ filteredGames);}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00048}00048\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{SurveyController_8java_source_l00052}00052\ }
 
 \end{DoxyCode}

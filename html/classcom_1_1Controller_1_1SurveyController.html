@@ -118,6 +118,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a747c9b74a38f028657ef5345da52a52e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1Service_1_1GameService.html">GameService</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1Controller_1_1SurveyController.html#a747c9b74a38f028657ef5345da52a52e">gameService</a></td></tr>
+<tr class="memdesc:a747c9b74a38f028657ef5345da52a52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The service used by this controller to perform operations.  <br /></td></tr>
 <tr class="separator:a747c9b74a38f028657ef5345da52a52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -161,14 +162,14 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String pointing to the games.html page </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SurveyController_8java_source.html#l00040">40</a> of file <a class="el" href="SurveyController_8java_source.html">SurveyController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                                                                                        {</div>
-<div class="line"><span class="lineno">   41</span>        model.addAttribute(<span class="stringliteral">&quot;pageTitle&quot;</span>, <span class="stringliteral">&quot;Your Games&quot;</span>);</div>
-<div class="line"><span class="lineno">   42</span>        List&lt;Game&gt; filteredGames = <a class="code hl_variable" href="classcom_1_1Controller_1_1SurveyController.html#a747c9b74a38f028657ef5345da52a52e">gameService</a>.<a class="code hl_function" href="classcom_1_1Service_1_1GameService.html#aacca2466a757f08fde43d0a28d2c7d5d">getGamesByCategories</a>(selectedCategories);</div>
-<div class="line"><span class="lineno">   43</span>        model.addAttribute(<span class="stringliteral">&quot;games&quot;</span>, filteredGames);</div>
-<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;games&quot;</span>;</div>
-<div class="line"><span class="lineno">   45</span>    }</div>
-<div class="ttc" id="aclasscom_1_1Controller_1_1SurveyController_html_a747c9b74a38f028657ef5345da52a52e"><div class="ttname"><a href="classcom_1_1Controller_1_1SurveyController.html#a747c9b74a38f028657ef5345da52a52e">com.Controller.SurveyController.gameService</a></div><div class="ttdeci">GameService gameService</div><div class="ttdef"><b>Definition</b> <a href="SurveyController_8java_source.html#l00023">SurveyController.java:23</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SurveyController_8java_source.html#l00043">43</a> of file <a class="el" href="SurveyController_8java_source.html">SurveyController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                                                        {</div>
+<div class="line"><span class="lineno">   44</span>        model.addAttribute(<span class="stringliteral">&quot;pageTitle&quot;</span>, <span class="stringliteral">&quot;Your Games&quot;</span>);</div>
+<div class="line"><span class="lineno">   45</span>        List&lt;Game&gt; filteredGames = <a class="code hl_variable" href="classcom_1_1Controller_1_1SurveyController.html#a747c9b74a38f028657ef5345da52a52e">gameService</a>.<a class="code hl_function" href="classcom_1_1Service_1_1GameService.html#aacca2466a757f08fde43d0a28d2c7d5d">getGamesByCategories</a>(selectedCategories);</div>
+<div class="line"><span class="lineno">   46</span>        model.addAttribute(<span class="stringliteral">&quot;games&quot;</span>, filteredGames);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;games&quot;</span>;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="ttc" id="aclasscom_1_1Controller_1_1SurveyController_html_a747c9b74a38f028657ef5345da52a52e"><div class="ttname"><a href="classcom_1_1Controller_1_1SurveyController.html#a747c9b74a38f028657ef5345da52a52e">com.Controller.SurveyController.gameService</a></div><div class="ttdeci">GameService gameService</div><div class="ttdoc">The service used by this controller to perform operations.</div><div class="ttdef"><b>Definition</b> <a href="SurveyController_8java_source.html#l00024">SurveyController.java:24</a></div></div>
 <div class="ttc" id="aclasscom_1_1Service_1_1GameService_html_aacca2466a757f08fde43d0a28d2c7d5d"><div class="ttname"><a href="classcom_1_1Service_1_1GameService.html#aacca2466a757f08fde43d0a28d2c7d5d">com.Service.GameService.getGamesByCategories</a></div><div class="ttdeci">List&lt; Game &gt; getGamesByCategories(List&lt; String &gt; categories)</div><div class="ttdoc">This method fetches a List of all Game objects that fall into the specified categories.</div><div class="ttdef"><b>Definition</b> <a href="GameService_8java_source.html#l00050">GameService.java:50</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -198,10 +199,10 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>String pointing to the survey.html page </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SurveyController_8java_source.html#l00030">30</a> of file <a class="el" href="SurveyController_8java_source.html">SurveyController.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                                              {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;survey&quot;</span>;</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="SurveyController_8java_source.html#l00032">32</a> of file <a class="el" href="SurveyController_8java_source.html">SurveyController.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                              {</div>
+<div class="line"><span class="lineno">   33</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;survey&quot;</span>;</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -226,7 +227,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SurveyController_8java_source.html#l00023">23</a> of file <a class="el" href="SurveyController_8java_source.html">SurveyController.java</a>.</p>
+<p>The service used by this controller to perform operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="SurveyController_8java_source.html#l00024">24</a> of file <a class="el" href="SurveyController_8java_source.html">SurveyController.java</a>.</p>
 
 </div>
 </div>
@@ -238,7 +241,7 @@ Private Attributes</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>com</b></li><li class="navelem"><a class="el" href="namespacecom_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classcom_1_1Controller_1_1SurveyController.html">SurveyController</a></li>
+    <li class="navelem"><a class="el" href="namespacecom.html">com</a></li><li class="navelem"><a class="el" href="namespacecom_1_1Controller.html">Controller</a></li><li class="navelem"><a class="el" href="classcom_1_1Controller_1_1SurveyController.html">SurveyController</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

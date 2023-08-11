@@ -27,7 +27,7 @@ var NAVTREE =
   [ "SplitBit", "index.html", [
     [ "citrusProject", "md_README.html", null ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", null ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -47,7 +47,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"DemoApplicationTests_8java.html"
+"DemoApplication_8java.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

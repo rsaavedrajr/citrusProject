@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['indexcontroller_0',['IndexController',['../classcom_1_1Controller_1_1IndexController.html#a85876f8aaa25770ade09f1e5f48c95aa',1,'com::Controller::IndexController']]]
+  ['homepage_0',['homePage',['../classcom_1_1Controller_1_1IndexController.html#a4a7ae9cc8dc4a4f5f95405aa77745e50',1,'com::Controller::IndexController']]]
 ];

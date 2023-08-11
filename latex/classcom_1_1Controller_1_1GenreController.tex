@@ -1,23 +1,30 @@
 \doxysection{com.\+Controller.\+Genre\+Controller Class Reference}
 \hypertarget{classcom_1_1Controller_1_1GenreController}{}\label{classcom_1_1Controller_1_1GenreController}\index{com.Controller.GenreController@{com.Controller.GenreController}}
+
+
+This controller class manages functionality of the genres.\+html webpage.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_a103543e6eecbf5f31d51c75ac72bfc17}{Genre\+Controller}} (\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{game\+Service}})
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the Genre\+Controller\textquotesingle{}s Game\+Service to the given Game\+Service object. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_a0cd5ca56ded76da34ae125c32760f601}{genres\+Page}} (Model model)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method used to get the HTTP mapping for the home genres.\+html page. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 final \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{game\+Service}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The service used by this controller to perform operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+This controller class manages functionality of the genres.\+html webpage. 
 
 
-Definition at line \mbox{\hyperlink{GenreController_8java_source_l00014}{14}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
+
+Definition at line \mbox{\hyperlink{GenreController_8java_source_l00017}{17}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
 
 
 
@@ -30,13 +37,22 @@ Definition at line \mbox{\hyperlink{GenreController_8java_source_l00014}{14}} of
 
 
 
-Definition at line \mbox{\hyperlink{GenreController_8java_source_l00017}{17}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
+Sets the Genre\+Controller\textquotesingle{}s Game\+Service to the given Game\+Service object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Service} & Game\+Service object used by this controller \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{GenreController_8java_source_l00027}{27}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ this.gameService\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}};}
-\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ this.gameService\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}};}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -50,60 +66,72 @@ Definition at line \mbox{\hyperlink{GenreController_8java_source_l00017}{17}} of
 
 
 
-Definition at line \mbox{\hyperlink{GenreController_8java_source_l00023}{23}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
+Method used to get the HTTP mapping for the home genres.\+html page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Model object used to render dynamic content on the genres page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representing the genres.\+html page 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GenreController_8java_source_l00037}{37}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}All\ Games"{}});}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ List<Game>\ actionGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Action"{}});}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}actionGames"{}},\ actionGames);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ List<Game>\ adventureGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Adventure"{}});}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}adventureGames"{}},\ adventureGames);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ List<Game>\ battleroyaleGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Battle\_Royale"{}});}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}battleroyaleGames"{}},\ battleroyaleGames);}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ List<Game>\ fightingGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Fighting"{}});}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}fightingGames"{}},\ fightingGames);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ List<Game>\ musicGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Music"{}});}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}musicGames"{}},\ musicGames);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ List<Game>\ open\_worldGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Open\_World"{}});}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}openworldGames"{}},\ open\_worldGames);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ List<Game>\ partyGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Party"{}});}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}partyGames"{}},\ partyGames);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ List<Game>\ puzzleGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Puzzle"{}});}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}puzzleGames"{}},\ puzzleGames);}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ List<Game>\ racingGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Racing"{}});}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}racingGames"{}},\ racingGames);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ List<Game>\ retroGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Retro"{}});}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}retroGames"{}},\ retroGames);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ List<Game>\ shooterGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Shooter"{}});}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}shooterGames"{}},\ shooterGames);}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ List<Game>\ sportsGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Sports"{}});}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}sportsGames"{}},\ sportsGames);}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ List<Game>\ strategyGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Strategy"{}});}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}strategyGames"{}},\ strategyGames);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ List<Game>\ survivalGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Survival"{}});}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}survivalGames"{}},\ survivalGames);}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ List<Game>\ tacticalGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Tactical"{}});}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}tacticalGames"{}},\ tacticalGames);}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}genres"{}};\ }
-\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}All\ Games"{}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ List<Game>\ actionGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Action"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}actionGames"{}},\ actionGames);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ List<Game>\ adventureGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Adventure"{}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}adventureGames"{}},\ adventureGames);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ List<Game>\ battleroyaleGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Battle\_Royale"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}battleroyaleGames"{}},\ battleroyaleGames);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ List<Game>\ fightingGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Fighting"{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}fightingGames"{}},\ fightingGames);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ List<Game>\ musicGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Music"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}musicGames"{}},\ musicGames);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ List<Game>\ open\_worldGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Open\_World"{}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}openworldGames"{}},\ open\_worldGames);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ List<Game>\ partyGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Party"{}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}partyGames"{}},\ partyGames);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ List<Game>\ puzzleGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Puzzle"{}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}puzzleGames"{}},\ puzzleGames);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ List<Game>\ racingGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Racing"{}});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}racingGames"{}},\ racingGames);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ List<Game>\ retroGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Retro"{}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}retroGames"{}},\ retroGames);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ List<Game>\ shooterGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Shooter"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}shooterGames"{}},\ shooterGames);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ List<Game>\ sportsGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Sports"{}});}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}sportsGames"{}},\ sportsGames);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ List<Game>\ strategyGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Strategy"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}strategyGames"{}},\ strategyGames);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ List<Game>\ survivalGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Survival"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}survivalGames"{}},\ survivalGames);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ List<Game>\ tacticalGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GenreController_ae39c83b1311d2a91fc963979e718ffc2}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{getGamesByCategory}}(\textcolor{stringliteral}{"{}Tactical"{}});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}tacticalGames"{}},\ tacticalGames);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}genres"{}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -117,7 +145,11 @@ Definition at line \mbox{\hyperlink{GenreController_8java_source_l00023}{23}} of
 
 
 
-Definition at line \mbox{\hyperlink{GenreController_8java_source_l00015}{15}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
+The service used by this controller to perform operations. 
+
+
+
+Definition at line \mbox{\hyperlink{GenreController_8java_source_l00021}{21}} of file \mbox{\hyperlink{GenreController_8java_source}{Genre\+Controller.\+java}}.
 
 
 

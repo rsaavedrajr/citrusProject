@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "com", null, [
+    [ "com", "namespacecom.html", [
       [ "Controller", "namespacecom_1_1Controller.html", [
         [ "GameController", "classcom_1_1Controller_1_1GameController.html", "classcom_1_1Controller_1_1GameController" ],
         [ "GenreController", "classcom_1_1Controller_1_1GenreController.html", "classcom_1_1Controller_1_1GenreController" ],
@@ -18,6 +18,7 @@ var annotated_dup =
       ] ],
       [ "SpringBoot", "namespacecom_1_1SpringBoot.html", [
         [ "DemoApplication", "classcom_1_1SpringBoot_1_1DemoApplication.html", null ]
-      ] ]
+      ] ],
+      [ "spotCheckTest", "classcom_1_1spotCheckTest.html", "classcom_1_1spotCheckTest" ]
     ] ]
 ];

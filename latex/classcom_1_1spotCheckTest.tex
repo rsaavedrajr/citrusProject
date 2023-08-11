@@ -1,0 +1,91 @@
+\doxysection{com.\+spot\+Check\+Test Class Reference}
+\hypertarget{classcom_1_1spotCheckTest}{}\label{classcom_1_1spotCheckTest}\index{com.spotCheckTest@{com.spotCheckTest}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1spotCheckTest_ab2bf01a4a8aeb7e898d93088832cbffd}{is\+Genre\+Real}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1spotCheckTest_ae5ddce2100618d43b1da5e9b7b31dcd8}{does\+It\+Detect\+Genre}} (String genre, boolean expected)
+\item 
+void \mbox{\hyperlink{classcom_1_1spotCheckTest_a9456c629442f065a8746026ea00083ec}{is\+Game\+In\+Genre}} (String name, String genre, Boolean expected)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{spotCheckTest_8java_source_l00020}{20}} of file \mbox{\hyperlink{spotCheckTest_8java_source}{spot\+Check\+Test.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1spotCheckTest_ae5ddce2100618d43b1da5e9b7b31dcd8}\label{classcom_1_1spotCheckTest_ae5ddce2100618d43b1da5e9b7b31dcd8} 
+\index{com.spotCheckTest@{com.spotCheckTest}!doesItDetectGenre@{doesItDetectGenre}}
+\index{doesItDetectGenre@{doesItDetectGenre}!com.spotCheckTest@{com.spotCheckTest}}
+\doxysubsubsection{\texorpdfstring{doesItDetectGenre()}{doesItDetectGenre()}}
+{\footnotesize\ttfamily void com.\+spot\+Check\+Test.\+does\+It\+Detect\+Genre (\begin{DoxyParamCaption}\item[{String}]{genre,  }\item[{boolean}]{expected }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{spotCheckTest_8java_source_l00049}{49}} of file \mbox{\hyperlink{spotCheckTest_8java_source}{spot\+Check\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ List<Game>\ gameList\ =\ testrepo.\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952}{findByGenre}}(genre);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ assertFalse(!(gameList.isEmpty()\ ==\ !expected));}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1spotCheckTest_a9456c629442f065a8746026ea00083ec}\label{classcom_1_1spotCheckTest_a9456c629442f065a8746026ea00083ec} 
+\index{com.spotCheckTest@{com.spotCheckTest}!isGameInGenre@{isGameInGenre}}
+\index{isGameInGenre@{isGameInGenre}!com.spotCheckTest@{com.spotCheckTest}}
+\doxysubsubsection{\texorpdfstring{isGameInGenre()}{isGameInGenre()}}
+{\footnotesize\ttfamily void com.\+spot\+Check\+Test.\+is\+Game\+In\+Genre (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{String}]{genre,  }\item[{Boolean}]{expected }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{spotCheckTest_8java_source_l00064}{64}} of file \mbox{\hyperlink{spotCheckTest_8java_source}{spot\+Check\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ List<Game>\ gameList\ =\ testrepo.\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952}{findByGenre}}(genre);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ result\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Game\ game\ :\ gameList)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (game.getTitle().equals(name))\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ System.out.println(name\ +\ \textcolor{stringliteral}{"{}\ "{}}\ +\ result);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ assertFalse(!(result\ ==\ expected));}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1spotCheckTest_ab2bf01a4a8aeb7e898d93088832cbffd}\label{classcom_1_1spotCheckTest_ab2bf01a4a8aeb7e898d93088832cbffd} 
+\index{com.spotCheckTest@{com.spotCheckTest}!isGenreReal@{isGenreReal}}
+\index{isGenreReal@{isGenreReal}!com.spotCheckTest@{com.spotCheckTest}}
+\doxysubsubsection{\texorpdfstring{isGenreReal()}{isGenreReal()}}
+{\footnotesize\ttfamily void com.\+spot\+Check\+Test.\+is\+Genre\+Real (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{spotCheckTest_8java_source_l00034}{34}} of file \mbox{\hyperlink{spotCheckTest_8java_source}{spot\+Check\+Test.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ List<Game>\ gameList\ =\ testrepo.\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952}{findByGenre}}(\textcolor{stringliteral}{"{}UNREAL"{}});}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ assertThat(gameList).isEmpty();}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/test/java/com/\mbox{\hyperlink{spotCheckTest_8java}{spot\+Check\+Test.\+java}}\end{DoxyCompactItemize}
