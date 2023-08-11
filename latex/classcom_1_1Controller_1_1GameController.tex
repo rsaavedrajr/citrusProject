@@ -1,0 +1,115 @@
+\doxysection{com.\+Controller.\+Game\+Controller Class Reference}
+\hypertarget{classcom_1_1Controller_1_1GameController}{}\label{classcom_1_1Controller_1_1GameController}\index{com.Controller.GameController@{com.Controller.GameController}}
+
+
+This controller class manages functionality of the games.\+html webpage.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Controller_1_1GameController_ac64e787d51da20ff628e64a536e19d61}{Game\+Controller}} (\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{game\+Service}})
+\begin{DoxyCompactList}\small\item\em Sets the Game\+Controller\textquotesingle{}s Game\+Service to the given Game\+Service object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_aefa772076feabe9dc15d2d48c65e1a4d}{games\+Page}} (Model model)
+\begin{DoxyCompactList}\small\item\em Method used to get the HTTP mapping for the home genres.\+html page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{game\+Service}}
+\begin{DoxyCompactList}\small\item\em The service used by this controller to perform operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This controller class manages functionality of the games.\+html webpage. 
+
+
+
+Definition at line \mbox{\hyperlink{GameController_8java_source_l00015}{15}} of file \mbox{\hyperlink{GameController_8java_source}{Game\+Controller.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1Controller_1_1GameController_ac64e787d51da20ff628e64a536e19d61}\label{classcom_1_1Controller_1_1GameController_ac64e787d51da20ff628e64a536e19d61} 
+\index{com.Controller.GameController@{com.Controller.GameController}!GameController@{GameController}}
+\index{GameController@{GameController}!com.Controller.GameController@{com.Controller.GameController}}
+\doxysubsubsection{\texorpdfstring{GameController()}{GameController()}}
+{\footnotesize\ttfamily com.\+Controller.\+Game\+Controller.\+Game\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}}}]{game\+Service }\end{DoxyParamCaption})}
+
+
+
+Sets the Game\+Controller\textquotesingle{}s Game\+Service to the given Game\+Service object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Service} & Game\+Service object used by this controller \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{GameController_8java_source_l00025}{25}} of file \mbox{\hyperlink{GameController_8java_source}{Game\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ this.gameService\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}};}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1Controller_1_1GameController_aefa772076feabe9dc15d2d48c65e1a4d}\label{classcom_1_1Controller_1_1GameController_aefa772076feabe9dc15d2d48c65e1a4d} 
+\index{com.Controller.GameController@{com.Controller.GameController}!gamesPage@{gamesPage}}
+\index{gamesPage@{gamesPage}!com.Controller.GameController@{com.Controller.GameController}}
+\doxysubsubsection{\texorpdfstring{gamesPage()}{gamesPage()}}
+{\footnotesize\ttfamily String com.\+Controller.\+Game\+Controller.\+games\+Page (\begin{DoxyParamCaption}\item[{Model}]{model }\end{DoxyParamCaption})}
+
+
+
+Method used to get the HTTP mapping for the home genres.\+html page. 
+
+This mathod fetches a List of all games from the Game\+Repository and then randomly sorts them before adding them as an attribute to the Model 
+\begin{DoxyParams}{Parameters}
+{\em model} & Model object used to render dynamic content on the games page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representing the games.\+html page 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GameController_8java_source_l00036}{36}} of file \mbox{\hyperlink{GameController_8java_source}{Game\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}All\ Games"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ List<Game>\ games\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_afe3f597ddf8258cb9815eeebe6ed9f84}{getAllGames}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ List<Game>\ randomGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526}{getRandomGamesSubset}}(games,\ 159);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ randomGames);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}\label{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1} 
+\index{com.Controller.GameController@{com.Controller.GameController}!gameService@{gameService}}
+\index{gameService@{gameService}!com.Controller.GameController@{com.Controller.GameController}}
+\doxysubsubsection{\texorpdfstring{gameService}{gameService}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} com.\+Controller.\+Game\+Controller.\+game\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The service used by this controller to perform operations. 
+
+
+
+Definition at line \mbox{\hyperlink{GameController_8java_source_l00019}{19}} of file \mbox{\hyperlink{GameController_8java_source}{Game\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/\+Controller/\mbox{\hyperlink{GameController_8java}{Game\+Controller.\+java}}\end{DoxyCompactItemize}

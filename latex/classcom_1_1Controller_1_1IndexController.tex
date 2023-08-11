@@ -1,0 +1,123 @@
+\doxysection{com.\+Controller.\+Index\+Controller Class Reference}
+\hypertarget{classcom_1_1Controller_1_1IndexController}{}\label{classcom_1_1Controller_1_1IndexController}\index{com.Controller.IndexController@{com.Controller.IndexController}}
+
+
+This controller class manages functionality of the index.\+html webpage.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classcom_1_1Controller_1_1IndexController_aee51de4f4e5b9b1d8e230819cd6132a0}{redirect\+To\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Sets the Index\+Controller\textquotesingle{}s Game\+Service to the given Game\+Service object. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1Controller_1_1IndexController_a4a7ae9cc8dc4a4f5f95405aa77745e50}{home\+Page}} (Model model)
+\begin{DoxyCompactList}\small\item\em Method used to get the HTTP mapping for the index.\+html page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} \mbox{\hyperlink{classcom_1_1Controller_1_1IndexController_aec09292e751646fb744545ca3878faee}{game\+Service}}
+\begin{DoxyCompactList}\small\item\em The service used by this controller to perform operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This controller class manages functionality of the index.\+html webpage. 
+
+Definition at line \mbox{\hyperlink{IndexController_8java_source_l00017}{17}} of file \mbox{\hyperlink{IndexController_8java_source}{Index\+Controller.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1Controller_1_1IndexController_a4a7ae9cc8dc4a4f5f95405aa77745e50}\label{classcom_1_1Controller_1_1IndexController_a4a7ae9cc8dc4a4f5f95405aa77745e50} 
+\index{com.Controller.IndexController@{com.Controller.IndexController}!homePage@{homePage}}
+\index{homePage@{homePage}!com.Controller.IndexController@{com.Controller.IndexController}}
+\doxysubsubsection{\texorpdfstring{homePage()}{homePage()}}
+{\footnotesize\ttfamily String com.\+Controller.\+Index\+Controller.\+home\+Page (\begin{DoxyParamCaption}\item[{Model}]{model }\end{DoxyParamCaption})}
+
+
+
+Method used to get the HTTP mapping for the index.\+html page. 
+
+This method uses a loop to add subsets of Game objects to a List onject that is then used as the Model 
+\begin{DoxyParams}{Parameters}
+{\em model} & Model object used to render dynamic content on the home page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representing the index.\+html page 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{IndexController_8java_source_l00049}{49}} of file \mbox{\hyperlink{IndexController_8java_source}{Index\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ List<Game>\ games\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1IndexController_aec09292e751646fb744545ca3878faee}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_afe3f597ddf8258cb9815eeebe6ed9f84}{getAllGames}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ List<Game>\ randomGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1IndexController_aec09292e751646fb744545ca3878faee}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526}{getRandomGamesSubset}}(games,\ 159);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ List<List<Game>>\ gamesModel\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 20;\ i++)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ List<Game>\ newRow\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1IndexController_aec09292e751646fb744545ca3878faee}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526}{getRandomGamesSubset}}(randomGames,\ 3);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ gamesModel.add(\textcolor{keyword}{new}\ ArrayList<>(newRow));}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 20;\ i++)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}gamesModel"{}},\ gamesModel);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}index"{}};}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Controller_1_1IndexController_aee51de4f4e5b9b1d8e230819cd6132a0}\label{classcom_1_1Controller_1_1IndexController_aee51de4f4e5b9b1d8e230819cd6132a0} 
+\index{com.Controller.IndexController@{com.Controller.IndexController}!redirectToIndex@{redirectToIndex}}
+\index{redirectToIndex@{redirectToIndex}!com.Controller.IndexController@{com.Controller.IndexController}}
+\doxysubsubsection{\texorpdfstring{redirectToIndex()}{redirectToIndex()}}
+{\footnotesize\ttfamily String com.\+Controller.\+Index\+Controller.\+redirect\+To\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the Index\+Controller\textquotesingle{}s Game\+Service to the given Game\+Service object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Service} & Game\+Service object used by this controller /\texorpdfstring{$\ast$}{*} public Index\+Controller(\+Game\+Service game\+Service) \{ this.\+game\+Service = game\+Service; \}\\
+\hline
+\end{DoxyParams}
+/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Method to redirect user to the home page when no extension is added
+
+\begin{DoxyReturn}{Returns}
+String representing a redirect to the index.\+html page 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{IndexController_8java_source_l00038}{38}} of file \mbox{\hyperlink{IndexController_8java_source}{Index\+Controller.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}redirect:/index"{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1Controller_1_1IndexController_aec09292e751646fb744545ca3878faee}\label{classcom_1_1Controller_1_1IndexController_aec09292e751646fb744545ca3878faee} 
+\index{com.Controller.IndexController@{com.Controller.IndexController}!gameService@{gameService}}
+\index{gameService@{gameService}!com.Controller.IndexController@{com.Controller.IndexController}}
+\doxysubsubsection{\texorpdfstring{gameService}{gameService}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{Game\+Service}} com.\+Controller.\+Index\+Controller.\+game\+Service\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The service used by this controller to perform operations. 
+
+
+
+Definition at line \mbox{\hyperlink{IndexController_8java_source_l00023}{23}} of file \mbox{\hyperlink{IndexController_8java_source}{Index\+Controller.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/\+Controller/\mbox{\hyperlink{IndexController_8java}{Index\+Controller.\+java}}\end{DoxyCompactItemize}

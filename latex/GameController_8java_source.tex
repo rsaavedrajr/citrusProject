@@ -1,0 +1,36 @@
+\doxysection{Game\+Controller.\+java}
+\hypertarget{GameController_8java_source}{}\label{GameController_8java_source}\index{src/main/java/com/Controller/GameController.java@{src/main/java/com/Controller/GameController.java}}
+\mbox{\hyperlink{GameController_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00001}\mbox{\hyperlink{namespacecom_1_1Controller}{00001}}\ \textcolor{keyword}{package\ }com.Controller;}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.springframework.stereotype.Controller;}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.springframework.ui.Model;}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.springframework.web.bind.annotation.GetMapping;}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00008}00008\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacecom}{com}}.\mbox{\hyperlink{namespacecom_1_1Entity}{Entity}}.\mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}};\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00009}00009\ \textcolor{keyword}{import}\ \mbox{\hyperlink{namespacecom}{com}}.\mbox{\hyperlink{namespacecom_1_1Service}{Service}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{GameService}};}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00014}00014\ @Controller}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00015}\mbox{\hyperlink{classcom_1_1Controller_1_1GameController}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcom_1_1Controller_1_1GameController}{GameController}}\ \{}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00019}\mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{00019}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService}{GameService}}\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}};}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00025}\mbox{\hyperlink{classcom_1_1Controller_1_1GameController_ac64e787d51da20ff628e64a536e19d61}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_ac64e787d51da20ff628e64a536e19d61}{GameController}}(\mbox{\hyperlink{classcom_1_1Service_1_1GameService}{GameService}}\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}})\ \{}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ this.gameService\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}};}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00035}00035\ \ \ \ \ @GetMapping(path\ =\ \textcolor{stringliteral}{"{}/games"{}})}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00036}\mbox{\hyperlink{classcom_1_1Controller_1_1GameController_aefa772076feabe9dc15d2d48c65e1a4d}{00036}}\ \ \ \ \ public\ String\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_aefa772076feabe9dc15d2d48c65e1a4d}{gamesPage}}(Model\ model)\ \{}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}pageTitle"{}},\ \textcolor{stringliteral}{"{}All\ Games"{}});}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ List<Game>\ games\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_afe3f597ddf8258cb9815eeebe6ed9f84}{getAllGames}}();}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ List<Game>\ randomGames\ =\ \mbox{\hyperlink{classcom_1_1Controller_1_1GameController_a9d2308e5b5b068b67e3c86d48e4791e1}{gameService}}.\mbox{\hyperlink{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526}{getRandomGamesSubset}}(games,\ 159);}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ model.addAttribute(\textcolor{stringliteral}{"{}games"{}},\ randomGames);}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}games"{}};\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{GameController_8java_source_l00045}00045\ \}}
+
+\end{DoxyCode}

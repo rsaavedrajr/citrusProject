@@ -1,0 +1,229 @@
+\doxysection{com.\+Service.\+Game\+Service Class Reference}
+\hypertarget{classcom_1_1Service_1_1GameService}{}\label{classcom_1_1Service_1_1GameService}\index{com.Service.GameService@{com.Service.GameService}}
+
+
+This class is used to fetch Game objects from the Jpa Repository.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1Service_1_1GameService_ac574708f2bf4400859d873c747d1bae7}{Game\+Service}} (\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository}{Game\+Repository}} given\+Game\+Repo)
+\begin{DoxyCompactList}\small\item\em This is the constructor for Game\+Service objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} \mbox{\hyperlink{classcom_1_1Service_1_1GameService_ac6bac25df5c1fbebaa610fea3ac23df1}{get\+Game\+By\+Id}} (int game\+Id)
+\begin{DoxyCompactList}\small\item\em This method gets a Game that matches the specified ID. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_afe3f597ddf8258cb9815eeebe6ed9f84}{get\+All\+Games}} ()
+\begin{DoxyCompactList}\small\item\em This method fetches a List of all Game objects from the Game\+Repository. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}{get\+Games\+By\+Categories}} (List$<$ String $>$ categories)
+\begin{DoxyCompactList}\small\item\em This method fetches a List of all Game objects that fall into the specified categories. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}{get\+Games\+By\+Category}} (String category)
+\begin{DoxyCompactList}\small\item\em This method fetches a List of all Game objects that fall into the specified category. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526}{get\+Random\+Games\+Subset}} (List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ games, int size)
+\begin{DoxyCompactList}\small\item\em This method gets a random subset of an arbitrary size from a List of Game objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final \mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository}{Game\+Repository}} \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322}{game\+Repository}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to fetch Game objects from the Jpa Repository. 
+
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00015}{15}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1Service_1_1GameService_ac574708f2bf4400859d873c747d1bae7}\label{classcom_1_1Service_1_1GameService_ac574708f2bf4400859d873c747d1bae7} 
+\index{com.Service.GameService@{com.Service.GameService}!GameService@{GameService}}
+\index{GameService@{GameService}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{GameService()}{GameService()}}
+{\footnotesize\ttfamily com.\+Service.\+Game\+Service.\+Game\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository}{Game\+Repository}}}]{given\+Game\+Repo }\end{DoxyParamCaption})}
+
+
+
+This is the constructor for Game\+Service objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+Game\+Repo} & Jpa Repository used by the Game\+Service class to fetch video game data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00024}{24}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ this.gameRepository\ =\ givenGameRepo;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1Service_1_1GameService_afe3f597ddf8258cb9815eeebe6ed9f84}\label{classcom_1_1Service_1_1GameService_afe3f597ddf8258cb9815eeebe6ed9f84} 
+\index{com.Service.GameService@{com.Service.GameService}!getAllGames@{getAllGames}}
+\index{getAllGames@{getAllGames}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{getAllGames()}{getAllGames()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ com.\+Service.\+Game\+Service.\+get\+All\+Games (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method fetches a List of all Game objects from the Game\+Repository. 
+
+\begin{DoxyReturn}{Returns}
+List of all Game objects 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00041}{41}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322}{gameRepository}}.findAll();}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Service_1_1GameService_ac6bac25df5c1fbebaa610fea3ac23df1}\label{classcom_1_1Service_1_1GameService_ac6bac25df5c1fbebaa610fea3ac23df1} 
+\index{com.Service.GameService@{com.Service.GameService}!getGameById@{getGameById}}
+\index{getGameById@{getGameById}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{getGameById()}{getGameById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} com.\+Service.\+Game\+Service.\+get\+Game\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{game\+Id }\end{DoxyParamCaption})}
+
+
+
+This method gets a Game that matches the specified ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Id} & integer representing the Game object\textquotesingle{}s ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Game object with a matching ID 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00033}{33}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322}{gameRepository}}.findById(gameId).orElse(\textcolor{keyword}{null});}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d}\label{classcom_1_1Service_1_1GameService_aacca2466a757f08fde43d0a28d2c7d5d} 
+\index{com.Service.GameService@{com.Service.GameService}!getGamesByCategories@{getGamesByCategories}}
+\index{getGamesByCategories@{getGamesByCategories}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{getGamesByCategories()}{getGamesByCategories()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ com.\+Service.\+Game\+Service.\+get\+Games\+By\+Categories (\begin{DoxyParamCaption}\item[{List$<$ String $>$}]{categories }\end{DoxyParamCaption})}
+
+
+
+This method fetches a List of all Game objects that fall into the specified categories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em categories} & List of Strings representing the various video game categories \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of Game objects within the categories 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00050}{50}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322}{gameRepository}}.\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_a4a50a5871be567d5c66953ef074e0eb5}{findByGenreIn}}(categories);}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0}\label{classcom_1_1Service_1_1GameService_a9a3396c7ef6668345f41b518726354d0} 
+\index{com.Service.GameService@{com.Service.GameService}!getGamesByCategory@{getGamesByCategory}}
+\index{getGamesByCategory@{getGamesByCategory}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{getGamesByCategory()}{getGamesByCategory()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ com.\+Service.\+Game\+Service.\+get\+Games\+By\+Category (\begin{DoxyParamCaption}\item[{String}]{category }\end{DoxyParamCaption})}
+
+
+
+This method fetches a List of all Game objects that fall into the specified category. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & String representing video game category \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of all Game objects within the specified categoory 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00059}{59}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322}{gameRepository}}.\mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository_af967659c6b27c66fb941a5e4a4adc952}{findByGenre}}(category);}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526}\label{classcom_1_1Service_1_1GameService_a3d29589228de7d3a8eb8be3a5c278526} 
+\index{com.Service.GameService@{com.Service.GameService}!getRandomGamesSubset@{getRandomGamesSubset}}
+\index{getRandomGamesSubset@{getRandomGamesSubset}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{getRandomGamesSubset()}{getRandomGamesSubset()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$ com.\+Service.\+Game\+Service.\+get\+Random\+Games\+Subset (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1Entity_1_1Game}{Game}} $>$}]{games,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+This method gets a random subset of an arbitrary size from a List of Game objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em games} & A List of Game objects \\
+\hline
+{\em size} & integer representing the size of teh subset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of $<$size$>$ Game objects 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00069}{69}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Collections.shuffle(games);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ games.subList(0,\ size);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322}\label{classcom_1_1Service_1_1GameService_a122c343dbdabf62c396ff099bf8b9322} 
+\index{com.Service.GameService@{com.Service.GameService}!gameRepository@{gameRepository}}
+\index{gameRepository@{gameRepository}!com.Service.GameService@{com.Service.GameService}}
+\doxysubsubsection{\texorpdfstring{gameRepository}{gameRepository}}
+{\footnotesize\ttfamily final \mbox{\hyperlink{interfacecom_1_1Repository_1_1GameRepository}{Game\+Repository}} com.\+Service.\+Game\+Service.\+game\+Repository\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{GameService_8java_source_l00018}{18}} of file \mbox{\hyperlink{GameService_8java_source}{Game\+Service.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/\+Service/\mbox{\hyperlink{GameService_8java}{Game\+Service.\+java}}\end{DoxyCompactItemize}
