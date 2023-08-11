@@ -15,10 +15,10 @@ import com.SpringBoot.DemoApplication;
 
 import java.util.List;
 
-
 @SpringBootTest(classes = DemoApplication.class)
 public class spotCheckTest {
-	// pass a genre to GameService and check if a game's name is in the returned list
+	// pass a genre to GameService and check if a game's name is in the returned
+	// list
 
 	// sets up repo
 	// @Autowired
@@ -29,7 +29,7 @@ public class spotCheckTest {
 
 	// TESTS TO ADD
 	// MAKE SURE LIST ISNT EMPTY
-	
+
 	@Test
 	public void isGenreReal() {
 		List<Game> gameList = testrepo.findByGenre("UNREAL");
@@ -38,13 +38,13 @@ public class spotCheckTest {
 
 	@ParameterizedTest(name = "is {0} a genre? = {1}")
 	@CsvSource({
-		"Fighting, True",
-		"Action, True",
-		"Strategy, True",
-		"Sports, True",
-		"Shooter, True",
-		"Survival, True",
-		"dertg45y6g, False",
+			"Fighting, True",
+			"Action, True",
+			"Strategy, True",
+			"Sports, True",
+			"Shooter, True",
+			"Survival, True",
+			"dertg45y6g, False",
 	})
 	public void doesItDetectGenre(String genre, boolean expected) {
 		List<Game> gameList = testrepo.findByGenre(genre);
@@ -54,12 +54,12 @@ public class spotCheckTest {
 
 	@ParameterizedTest(name = "is {0} in {1} genre? {2}")
 	@CsvSource({
-		"Rivals of Aether, Fighting, True",
-		"DELTARUNE, Action, True",
-		"Among Us, Fighting, False",
-		"Mario Party Superstars, Party, True",
-		"Minecraft, Educational, True",
-		"Portal 2, Strategy, False",
+			"Rivals of Aether, Fighting, True",
+			"DELTARUNE, Action, True",
+			"Among Us, Fighting, False",
+			"Mario Party Superstars, Party, True",
+			"Minecraft, Educational, True",
+			"Portal 2, Strategy, False",
 	})
 	public void isGameInGenre(String name, String genre, Boolean expected) {
 		List<Game> gameList = testrepo.findByGenre(genre);
