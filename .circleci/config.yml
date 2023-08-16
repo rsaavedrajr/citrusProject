@@ -2,10 +2,43 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+# for mysql
+orbs:
+  browser-tools: circleci/browser-tools@1.2.3
+
 executors:
   java17:
     docker:
       - image: 'cimg/openjdk:17.0'
+
+      # for mysql
+      - image: cimg/php:8.1-browsers # The primary container where steps are run
+      - image: cimg/mysql:8.0
+        environment:
+          MYSQL_ROOT_PASSWORD: rootpw
+          MYSQL_DATABASE: test_db
+          MYSQL_USER: user
+          MYSQL_PASSWORD: passw0rd
+    # for mysql
+    steps:
+      - checkout
+      - run:
+      # Our primary container isn't MYSQL so run a sleep command until it's ready.
+          name: Waiting for MySQL to be ready
+          command: |
+            for i in `seq 1 10`;
+            do
+              nc -z 127.0.0.1 3306 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for MySQL && exit 1
+      - run:
+          name: Install MySQL CLI; Import dummy data; run an example query
+          command: |
+            sudo apt-get install default-mysql-client
+            mysql -h 127.0.0.1 -u user -ppassw0rd test_db < data/game.sql
+            mysql -h 127.0.0.1 -u user -ppassw0rd --execute="SELECT * FROM test_db.Persons"
 
 # install for maven
 orbs:
@@ -33,6 +66,9 @@ jobs:
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
+  build-deploy:
+    jobs:
+      - build
   maven_test:
     jobs:
       - maven/test:
