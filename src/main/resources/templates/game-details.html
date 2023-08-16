@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Game Details</title>
+    <link rel="stylesheet" href="detailsStyles.css">
+</head>
+<body>
+    <div class="popup-content">
+        <img th:src="${Game.image}"></img>
+        <h2 th:text="${Game.title}"></h2>
+        <p th:text="${Game.console}"></p>
+        <!-- Add other game details -->
+    </div>
+</body>
+</html>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>SplitBit - Browse Games</title>
     <link rel="stylesheet" href="gamesStyles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -15,7 +17,7 @@
             <ul class="nav-links">
                 <li><a href="/index">Home</a></li>
                 <li><a href="/games">Games</a></li>
-                <li><a href="/genres">Genres</a></li> 
+                <li><a href="/genres">Genres</a></li>
                 <!-- <li><a href="#">Favorites</a></li> -->
             </ul>
             <!-- <div class="search-bar"> 
@@ -26,14 +28,21 @@
     </header>
 
     <!-- Game Grid Section -->
-    
-    <h2 th:text="${pageTitle}"></h2>
+
+    <h2 th:text="${pageTitle}" class="title"></h2>
     <section class="grid-container">
+        <div class="popup-overlay">
+            <div class="popup-content">
+                <!-- Pop-up content will be inserted here -->
+            </div>
+        </div>
         <div th:each="Game : ${games}" class="game-item">
-            <img th:src="${Game.image}" alt="Game Image" />
-            <h3 th:text="${Game.title}"></h3>
-            <p th:text="${Game.genre}"></p>
-            <!-- Add more game information as needed -->
+                
+                <img th:src="${Game.image}" alt="Game Image" onclick="showGameDetails('${Game.title}', '${Game.genre}', '${Game.console}')" />
+                <h3 th:text="${Game.title}"></h3>
+                <p th:text="${Game.genre}"></p>
+                <!-- Add more game information as needed -->
+            </a>
         </div>
     </section>
 
@@ -41,5 +50,35 @@
     <footer>
         <!-- Footer content here -->
     </footer>
+    <script>
+        // const gameLinks = document.querySelectorAll('.game-link');
+        const popupOverlay = document.querySelector('.popup-overlay');
+        const popupContent = document.querySelector('.grid-container');
+        const pageTitle = document.querySelector('.title');
+
+        function showGameDetails(title, genre, description) {
+            pageTitle.innerHTML = ''; // Clear existing content
+            popupContent.innerHTML = ''; // Clear existing content
+            // Create the HTML structure for the pop-up content
+            var content = `
+                    <div class="game-details">
+                        <h2>${title}</h2>
+                        <p><strong>Genre:</strong> ${genre}</p>
+                        <p><strong>Description:</strong> ${description}</p>
+                        <!-- Add more game details here as needed -->
+                    </div>
+                    `;
+
+            // Set the content in the pop-up
+            popupContent.innerHTML = content;
+
+            // Show the pop-up
+            popup.style.display = 'block';
+        }
+
+        
+    </script>
+
 </body>
+
 </html>

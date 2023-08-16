@@ -3,6 +3,7 @@ package com.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import com.Entity.Game; 
@@ -28,7 +29,7 @@ public class GameController {
 
     /** Method used to get the HTTP mapping for the home genres.html page
     *
-    * This mathod fetches a List of all games from the GameRepository and then randomly sorts them before adding them as an attribute to the Model
+    * This method fetches a List of all games from the GameRepository and then randomly sorts them before adding them as an attribute to the Model
     * @param model Model object used to render dynamic content on the games page
     * @returns String representing the games.html page
     */
@@ -40,6 +41,7 @@ public class GameController {
         model.addAttribute("games", randomGames);
         return "games"; 
     }
+
 
 
 }

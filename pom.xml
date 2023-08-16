@@ -67,6 +67,24 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+            	<groupId>com.spotify</groupId>
+            	<artifactId>dockerfile-maven-plugin</artifactId>
+            	<version>1.4.13</version> 
+            	<executions>
+					<execution>
+						<id>default</id>
+						<goals>
+							<goal>build</goal>
+							<goal>push</goal>
+						</goals>
+					</execution>
+            	</executions>
+				<configuration>
+					<dockerfile.tag>app</dockerfile.tag>
+					<dockerfile.repository>rmcmaster7689/splitbit</dockerfile.repository>
+				</configuration>
+        	</plugin>
 		</plugins>
 		<resources>
         	<resource>
