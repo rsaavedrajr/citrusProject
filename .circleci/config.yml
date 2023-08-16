@@ -2,8 +2,9 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# for mysql
+# install for maven
 orbs:
+  maven: circleci/maven@1.4.1
   browser-tools: circleci/browser-tools@1.2.3
 
 executors:
@@ -11,7 +12,28 @@ executors:
     docker:
       - image: 'cimg/openjdk:17.0'
 
-      # for mysql
+# Define a job to be invoked later in a workflow.
+# See: https://circleci.com/docs/configuration-reference/#jobs
+jobs:
+  say-hello:
+    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
+    # See: https://circleci.com/docs/configuration-reference/#executor-job
+    docker:
+      - image: cimg/base:stable
+    # Add steps to the job
+    # See: https://circleci.com/docs/configuration-reference/#steps
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
+      - run:
+          name: "By Category Check"
+          command: "echo the w2"
+
+  # for tests
+  build:
+    docker:
       - image: cimg/php:8.1-browsers # The primary container where steps are run
       - image: cimg/mysql:8.0
         environment:
@@ -19,7 +41,7 @@ executors:
           MYSQL_DATABASE: test_db
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
-    # for mysql
+
     steps:
       - checkout
       - run:
@@ -40,28 +62,6 @@ executors:
             mysql -h 127.0.0.1 -u user -ppassw0rd test_db < data/game.sql
             mysql -h 127.0.0.1 -u user -ppassw0rd --execute="SELECT * FROM test_db.Persons"
 
-# install for maven
-orbs:
-  maven: circleci/maven@1.4.1
-
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-      - run:
-          name: "By Category Check"
-          command: "echo the w2"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
